@@ -1,0 +1,1646 @@
+[
+  {
+    "id": "APP012",
+    "name": "Siddharth Rao",
+    "email": "siddharth.rao.nitk@gmail.com",
+    "cover_letter": "NIT Karnataka, graduating May 2025. My final year project is building a distributed crawler for Indian government tender portals — all of which have different anti-bot measures. Three use reCAPTCHA, two use custom JS challenges. I have production code for all of these.",
+    "answers": [
+      {
+        "question": "How would you approach extracting data from a platform with reCAPTCHA and no public API?",
+        "answer": "My first move would be to check if the platform renders data server-side or via AJAX. F12, Network tab, filter XHR/Fetch, reload the page and interact. If I see JSON responses with the application data, I've found the internal API — just need authenticated session cookies to hit it directly. For the auth: reCAPTCHA Enterprise passes in a real Chrome because the fingerprint matches (real browser, real OS, real GPU via WebGL). I use Playwright in headed mode (not headless), automate only the navigation and form fill, pause for manual CAPTCHA if it ever shows the checkbox variant, then export storageState. Session valid for ~24h, I have a cron job that re-authenticates at 23h."
+      },
+      {
+        "question": "How do you handle the 1140 applicants across 57 pages?",
+        "answer": "Async pagination: asyncio with a semaphore limiting to 3 concurrent requests, each with 1-2s random delay. Build a list of page URLs first, then fetch all with aiohttp in batches. For error recovery, track which pages succeeded in a JSON file — so if it crashes at page 40, I resume from page 40 not page 1. Total time for 57 pages: about 4-5 minutes."
+      }
+    ],
+    "skills": [
+      "Python",
+      "asyncio",
+      "aiohttp",
+      "Playwright",
+      "PostgreSQL",
+      "Redis",
+      "FastAPI",
+      "Docker"
+    ],
+    "github_url": "https://github.com/siddharthrao-nitk",
+    "github_info": {
+      "valid": true,
+      "username": "siddharthrao-nitk",
+      "repos": 27,
+      "stars": 63,
+      "followers": 31,
+      "recent_activity": true,
+      "is_empty": false,
+      "non_fork_count": 22
+    },
+    "resume_url": "",
+    "applied_at": "2024-11-01T17:30:00Z",
+    "status": "pending",
+    "ai_flags": [],
+    "score": 88.0,
+    "tier": "Fast-Track",
+    "score_breakdown": {
+      "answer_quality": 38.0,
+      "technical_skills": 20,
+      "github_quality": 20,
+      "ai_penalty": 0,
+      "completeness": 10,
+      "total": 88.0,
+      "details": {
+        "answers_llm": "Extremely strong technical depth with concrete implementation details, showing real-world experience solving complex web scraping challenges involving anti-bot measures. Demonstrates nuanced understanding of browser automation, session management, and efficient concurrent data extraction.",
+        "skills": "domains={'async', 'data', 'scraping', 'python', 'devops', 'auth'}, kws=['playwright', 'requests', 'aiohttp', 'storagestate', 'cookies', 'session']",
+        "github": "repos=27, stars=63, non_forks=22, recent=True",
+        "ai_penalty": "no AI signals: []",
+        "completeness": "all fields present"
+      }
+    },
+    "rank": 1,
+    "percentile": 100.0
+  },
+  {
+    "id": "APP001",
+    "name": "Arjun Mehta",
+    "email": "arjun.mehta97@gmail.com",
+    "cover_letter": "I have been working on web scraping projects for the past 2 years, specifically dealing with anti-bot systems. In my last project I scraped 50k product listings from Flipkart by reverse engineering their GraphQL API from network traffic rather than using Selenium which kept getting blocked. I understand the challenge of IP-bound sessions and reCAPTCHA and I have concrete approaches for both.",
+    "answers": [
+      {
+        "question": "How would you approach extracting data from a platform with reCAPTCHA and no public API?",
+        "answer": "First thing I'd do is open DevTools Network tab and watch what XHR requests fire when I browse the applications page manually. Most platforms that say they have no API actually do — they just use it for their own frontend. I'd look for /api/v2/applications or similar JSON endpoints. If I find one I can replay those requests with the session cookies from my authenticated browser session. For the cookies: reCAPTCHA passes in a real Chrome session so I'd use Chrome with remote debugging (--remote-debugging-port=9222) and read the cookies via CDP WebSocket. This keeps the cookies on the same IP. I've done this before for a client project — took about 3 hours to get working but then scraped 20k records reliably."
+      },
+      {
+        "question": "Have you dealt with IP-bound sessions before?",
+        "answer": "Yes. The key insight is you cannot rotate IPs once a session is created — the session is pinned. So I keep everything on one machine. For the scraping itself I add random delays (2-5s) between requests and randomize the User-Agent and Accept-Language headers to look like a real browser. I also respect robots.txt unless the client specifically says otherwise."
+      }
+    ],
+    "skills": [
+      "Python",
+      "Selenium",
+      "Playwright",
+      "BeautifulSoup",
+      "requests",
+      "CDP",
+      "REST APIs",
+      "PostgreSQL"
+    ],
+    "github_url": "https://github.com/arjunmehta97",
+    "github_info": {
+      "valid": true,
+      "username": "arjunmehta97",
+      "repos": 23,
+      "stars": 41,
+      "followers": 18,
+      "recent_activity": true,
+      "is_empty": false,
+      "non_fork_count": 19
+    },
+    "resume_url": "",
+    "applied_at": "2024-11-01T09:23:00Z",
+    "status": "pending",
+    "ai_flags": [],
+    "score": 86.0,
+    "tier": "Fast-Track",
+    "score_breakdown": {
+      "answer_quality": 38.0,
+      "technical_skills": 18,
+      "github_quality": 20,
+      "ai_penalty": 0,
+      "completeness": 10,
+      "total": 86.0,
+      "details": {
+        "answers_llm": "Extremely strong technical depth with concrete, specific examples demonstrating real-world experience. Answers show nuanced understanding of web scraping challenges and sophisticated technical approaches.",
+        "skills": "domains={'data', 'scraping', 'python', 'web', 'auth'}, kws=['selenium', 'playwright', 'beautifulsoup', 'requests', 'cdp', 'cookies']",
+        "github": "repos=23, stars=41, non_forks=19, recent=True",
+        "ai_penalty": "no AI signals: []",
+        "completeness": "all fields present"
+      }
+    },
+    "rank": 2,
+    "percentile": 96.7
+  },
+  {
+    "id": "APP003",
+    "name": "Karan Patel",
+    "email": "karan.patel.codes@outlook.com",
+    "cover_letter": "Final year CS student at BITS Pilani. I've built a GitHub scraper that runs daily to track trending repos and sends me a digest — it handles rate limiting and token rotation across 5 accounts. I know exactly why Selenium fails on reCAPTCHA Enterprise and I have a working solution using mitmproxy.",
+    "answers": [
+      {
+        "question": "How would you approach extracting data from a platform with reCAPTCHA and no public API?",
+        "answer": "Selenium headless = dead on arrival against reCAPTCHA Enterprise. It checks navigator.webdriver, the Chrome DevTools protocol fingerprint, and timing of mouse events. I'd use mitmproxy as a system proxy, log in manually, and let mitmproxy capture all the session headers including cookies. Then replay those in a requests.Session. The cookies are httpOnly so extensions can't read them — mitmproxy intercepts at the network layer so that's not an issue. For pagination I'd find the XHR endpoint (usually something like /api/applications?page=N&per_page=20) and loop until next_page is null."
+      },
+      {
+        "question": "What would fail and what's your backup?",
+        "answer": "Main risk: session expires after 24h or if the server detects unusual request patterns (too fast, wrong headers). Backup: schedule re-authentication every 12h and mirror all browser headers exactly — including Accept-Encoding, Sec-Fetch-* headers. If the XHR approach fails I'd try CDP on a real non-headless Chrome as a last resort."
+      }
+    ],
+    "skills": [
+      "Python",
+      "mitmproxy",
+      "requests",
+      "asyncio",
+      "PostgreSQL",
+      "Redis",
+      "Docker"
+    ],
+    "github_url": "https://github.com/karanpatel-bits",
+    "github_info": {
+      "valid": true,
+      "username": "karanpatel-bits",
+      "repos": 31,
+      "stars": 87,
+      "followers": 42,
+      "recent_activity": true,
+      "is_empty": false,
+      "non_fork_count": 27
+    },
+    "resume_url": "",
+    "applied_at": "2024-11-01T11:30:00Z",
+    "status": "pending",
+    "ai_flags": [],
+    "score": 85.0,
+    "tier": "Fast-Track",
+    "score_breakdown": {
+      "answer_quality": 35.0,
+      "technical_skills": 20,
+      "github_quality": 20,
+      "ai_penalty": 0,
+      "completeness": 10,
+      "total": 85.0,
+      "details": {
+        "answers_llm": "Demonstrates deep technical understanding of reCAPTCHA Enterprise evasion techniques with specific, concrete implementation details. Shows real-world experience and nuanced problem-solving approach with clear backup strategies.",
+        "skills": "domains={'async', 'data', 'scraping', 'python', 'devops', 'auth'}, kws=['selenium', 'requests', 'cdp', 'chrome devtools', 'mitmproxy', 'cookies']",
+        "github": "repos=31, stars=87, non_forks=27, recent=True",
+        "ai_penalty": "no AI signals: []",
+        "completeness": "all fields present"
+      }
+    },
+    "rank": 3,
+    "percentile": 93.3
+  },
+  {
+    "id": "APP008",
+    "name": "Vikram Singh",
+    "email": "vikram.singh.iitkgp@gmail.com",
+    "cover_letter": "IIT Kharagpur, 3rd year. Interned at Juspay last summer working on payment gateway integrations. I've reverse-engineered 4 payment SDKs to write unified wrappers. Web scraping with anti-bot measures is a similar problem — you're reverse-engineering someone else's protocol.",
+    "answers": [
+      {
+        "question": "How would you approach extracting data from a platform with reCAPTCHA and no public API?",
+        "answer": "The IP-binding of cookies is the critical constraint. It rules out cookie-sharing across machines. My approach: run everything on one box. Launch Chrome non-headless with --remote-debugging-port=9222. Log in manually (reCAPTCHA sees real Chrome, real user, passes). Use CDP to dump all cookies for internshala.com domain. Then use those cookies in requests — matching exact browser headers (especially Sec-CH-UA, Sec-Fetch headers which are browser-specific). For pagination: inspect the network request when you click page 2, replicate that request structure. Add exponential backoff for 429s."
+      },
+      {
+        "question": "What does the code look like?",
+        "answer": "import requests, json, websocket. Connect to localhost:9222/json, pick the internshala tab, connect WebSocket, send {id:1, method:'Network.getAllCookies'}. Parse response. Build requests.Session with those cookies. GET /employer/applications/{job_id}?page={n} in a loop until you get fewer results than page_size."
+      }
+    ],
+    "skills": [
+      "Python",
+      "Go",
+      "CDP",
+      "requests",
+      "PostgreSQL",
+      "Redis",
+      "Docker",
+      "Kubernetes"
+    ],
+    "github_url": "https://github.com/vikram-iitk",
+    "github_info": {
+      "valid": true,
+      "username": "vikram-iitk",
+      "repos": 38,
+      "stars": 124,
+      "followers": 67,
+      "recent_activity": true,
+      "is_empty": false,
+      "non_fork_count": 30
+    },
+    "resume_url": "",
+    "applied_at": "2024-11-01T15:00:00Z",
+    "status": "pending",
+    "ai_flags": [],
+    "score": 84.0,
+    "tier": "Fast-Track",
+    "score_breakdown": {
+      "answer_quality": 38.0,
+      "technical_skills": 16,
+      "github_quality": 20,
+      "ai_penalty": 0,
+      "completeness": 10,
+      "total": 84.0,
+      "details": {
+        "answers_llm": "Extremely precise technical approach demonstrating deep understanding of browser automation, cookie handling, and anti-bot mitigation techniques. Concrete implementation details with specific code snippets show real-world experience.",
+        "skills": "domains={'data', 'scraping', 'python', 'devops', 'auth'}, kws=['requests', 'cdp', 'cookies', 'session', 'postgresql', 'redis']",
+        "github": "repos=38, stars=124, non_forks=30, recent=True",
+        "ai_penalty": "no AI signals: []",
+        "completeness": "all fields present"
+      }
+    },
+    "rank": 4,
+    "percentile": 90.0
+  },
+  {
+    "id": "APP016",
+    "name": "Divya Menon",
+    "email": "divya.menon.backend@gmail.com",
+    "cover_letter": "3 years building backend systems at a Series A startup (while doing my degree part-time). We had a competitor monitoring system that scraped 15 e-commerce sites daily. I owned that system for 2 years. It broke regularly and I fixed it regularly. I know what production scraping actually looks like vs toy projects.",
+    "answers": [
+      {
+        "question": "How would you approach extracting data from a platform with reCAPTCHA and no public API?",
+        "answer": "Production answer: I'd set up a long-lived Chrome instance on the same machine as the scraper using CDP. Log in once manually. Write a health check that tests the session every hour by hitting a lightweight authenticated endpoint. If session dies, alert and re-authenticate. For the scraping: inspect network traffic to find the XHR endpoint, hit it directly with requests (not Playwright) for speed. Playwright is 10x slower than raw HTTP. Store raw responses in SQLite before parsing — so if the parser breaks I can re-parse without re-scraping. The 57-page pagination I'd do with asyncio, max 5 concurrent, with a shared rate limiter."
+      }
+    ],
+    "skills": [
+      "Python",
+      "asyncio",
+      "PostgreSQL",
+      "Redis",
+      "Docker",
+      "nginx",
+      "celery",
+      "SQLAlchemy"
+    ],
+    "github_url": "https://github.com/divyamenon-be",
+    "github_info": {
+      "valid": true,
+      "username": "divyamenon-be",
+      "repos": 21,
+      "stars": 38,
+      "followers": 14,
+      "recent_activity": true,
+      "is_empty": false,
+      "non_fork_count": 18
+    },
+    "resume_url": "",
+    "applied_at": "2024-11-02T09:00:00Z",
+    "status": "pending",
+    "ai_flags": [],
+    "score": 84.0,
+    "tier": "Fast-Track",
+    "score_breakdown": {
+      "answer_quality": 38.0,
+      "technical_skills": 16,
+      "github_quality": 20,
+      "ai_penalty": 0,
+      "completeness": 10,
+      "total": 84.0,
+      "details": {
+        "answers_llm": "Extremely strong, pragmatic technical answer showing deep real-world scraping experience with specific architectural details and performance optimization insights. Minor point deduction for not explicitly addressing reCAPTCHA Enterprise mitigation.",
+        "skills": "domains={'async', 'data', 'scraping', 'python', 'devops', 'auth'}, kws=['playwright', 'requests', 'cdp', 'session', 'asyncio', 'async']",
+        "github": "repos=21, stars=38, non_forks=18, recent=True",
+        "ai_penalty": "no AI signals: []",
+        "completeness": "all fields present"
+      }
+    },
+    "rank": 5,
+    "percentile": 86.7
+  },
+  {
+    "id": "APP019",
+    "name": "Kabir Sharma",
+    "email": "kabir.sharma.sde@gmail.com",
+    "cover_letter": "I've spent the last 6 months contributing to an open source project called scrape-ladder (1.2k stars). It's a framework for building scrapers that handle auth, sessions, and anti-bot. I know this problem space very well.",
+    "answers": [
+      {
+        "question": "How would you approach extracting data from a platform with reCAPTCHA and no public API?",
+        "answer": "I'd approach this in two stages. Stage 1 (15 mins): Map the attack surface. Open DevTools, log in manually, watch XHR traffic. Is application data coming from a JSON endpoint? If yes, I just need valid cookies + exact request headers. Stage 2 (1-2 hours): Get the cookies. Since they're httpOnly and IP-bound, I need to extract them from a live Chrome session on the same machine. CDP is the cleanest way: chrome --remote-debugging-port=9222, then websocket to /json to find the tab, then Network.getAllCookies. Build a maintenance script that refreshes cookies every 18 hours. The actual scraping loop is trivial once you have auth."
+      },
+      {
+        "question": "What if they detect your scraping and block you?",
+        "answer": "If I start getting 403s or empty responses mid-scrape, first check if the session is still valid by hitting a known-good endpoint. If session is dead, re-authenticate. If session is alive but still getting 403, I'm rate-limited — back off for 10 minutes and retry. If it persists, reduce concurrency to 1 request every 5 seconds. I also save a checkpoint file after every 5 pages so I can resume without re-scraping."
+      }
+    ],
+    "skills": [
+      "Python",
+      "CDP",
+      "asyncio",
+      "PostgreSQL",
+      "Redis",
+      "open source contribution"
+    ],
+    "github_url": "https://github.com/kabirsharma-oss",
+    "github_info": {
+      "valid": true,
+      "username": "kabirsharma-oss",
+      "repos": 45,
+      "stars": 312,
+      "followers": 189,
+      "recent_activity": true,
+      "is_empty": false,
+      "non_fork_count": 38
+    },
+    "resume_url": "",
+    "applied_at": "2024-11-02T12:00:00Z",
+    "status": "pending",
+    "ai_flags": [],
+    "score": 82.0,
+    "tier": "Fast-Track",
+    "score_breakdown": {
+      "answer_quality": 38.0,
+      "technical_skills": 14,
+      "github_quality": 20,
+      "ai_penalty": 0,
+      "completeness": 10,
+      "total": 82.0,
+      "details": {
+        "answers_llm": "Extremely precise, technically sophisticated approach demonstrating deep practical knowledge of web scraping challenges. Shows nuanced understanding of authentication, session management, and resilient scraping techniques.",
+        "skills": "domains={'async', 'python', 'auth', 'data'}, kws=['cdp', 'cookies', 'session', 'asyncio', 'async', 'postgresql']",
+        "github": "repos=45, stars=312, non_forks=38, recent=True",
+        "ai_penalty": "no AI signals: []",
+        "completeness": "all fields present"
+      }
+    },
+    "rank": 6,
+    "percentile": 83.3
+  },
+  {
+    "id": "APP021",
+    "name": "Yash Agarwal",
+    "email": "yash.agarwal.sde@gmail.com",
+    "cover_letter": "I built a monitoring system for my college placement cell that scrapes company portals for new job postings. Several of those portals have bot protection. It runs as a cron job on a ₹300/month VPS and has been running without issues for 14 months.",
+    "answers": [
+      {
+        "question": "How would you approach extracting data from a platform with reCAPTCHA and no public API?",
+        "answer": "My actual workflow: (1) Burp Suite as proxy, log in manually, capture the session cookies and all request headers to a JSON file. (2) Write a Python script that loads that JSON and builds a requests.Session from it. (3) Find the pagination endpoint by looking at what requests fire when I click 'Page 2'. (4) Loop through all pages with a 2s sleep between each. (5) If a request returns non-200 or suspicious HTML (like a login page), stop and alert via Telegram bot. (6) Schedule re-authentication weekly since the session usually lasts that long. The Burp Suite approach is simpler than CDP and doesn't require Chrome to be running on the server."
+      }
+    ],
+    "skills": [
+      "Python",
+      "Burp Suite",
+      "requests",
+      "PostgreSQL",
+      "nginx",
+      "cron"
+    ],
+    "github_url": "https://github.com/yashagarwal-sde",
+    "github_info": {
+      "valid": true,
+      "username": "yashagarwal-sde",
+      "repos": 16,
+      "stars": 19,
+      "followers": 7,
+      "recent_activity": true,
+      "is_empty": false,
+      "non_fork_count": 14
+    },
+    "resume_url": "",
+    "applied_at": "2024-11-02T14:00:00Z",
+    "status": "pending",
+    "ai_flags": [],
+    "score": 82.0,
+    "tier": "Fast-Track",
+    "score_breakdown": {
+      "answer_quality": 35.0,
+      "technical_skills": 18,
+      "github_quality": 19,
+      "ai_penalty": 0,
+      "completeness": 10,
+      "total": 82.0,
+      "details": {
+        "answers_llm": "Strong practical approach with specific technical details and clear evidence of real-world implementation. Loses points for not explicitly addressing reCAPTCHA mitigation strategies.",
+        "skills": "domains={'data', 'scraping', 'python', 'devops', 'auth'}, kws=['requests', 'cdp', 'burp suite', 'cookies', 'session', 'postgresql']",
+        "github": "repos=16, stars=19, non_forks=14, recent=True",
+        "ai_penalty": "no AI signals: []",
+        "completeness": "all fields present"
+      }
+    },
+    "rank": 7,
+    "percentile": 80.0
+  },
+  {
+    "id": "APP026",
+    "name": "Lavanya Subramaniam",
+    "email": "lavanya.subra.iitm@gmail.com",
+    "cover_letter": "IIT Madras, dual degree (CS + Data Science). TA for the web technologies course. I've designed the anti-scraping assignment that students have to bypass — so I know this from both sides.",
+    "answers": [
+      {
+        "question": "How would you approach extracting data from a platform with reCAPTCHA and no public API?",
+        "answer": "Since I've designed similar systems: the main signal reCAPTCHA Enterprise uses that most people don't know about is the interaction graph — how you moved the mouse before clicking submit, whether you copied-pasted into the form vs typed, scroll behavior. In headless mode all of these are absent or clearly fake. My approach: use Playwright with slow_mo=50 and a custom mouse movement simulation (bezier curves, not straight lines), genuine keyboard delays matching 60wpm typing speed. For the IP binding: I'd SSH into a single persistent VM, run Chrome there, and hit the CDP endpoint from the same machine. Never move the session. For the actual data extraction: monitor XHR, find the JSON API, hit it with authenticated requests — skip the HTML parsing entirely."
+      }
+    ],
+    "skills": [
+      "Python",
+      "JavaScript",
+      "Playwright",
+      "browser internals",
+      "cryptography",
+      "Docker",
+      "Kubernetes"
+    ],
+    "github_url": "https://github.com/lavanya-iitm",
+    "github_info": {
+      "valid": true,
+      "username": "lavanya-iitm",
+      "repos": 34,
+      "stars": 91,
+      "followers": 55,
+      "recent_activity": true,
+      "is_empty": false,
+      "non_fork_count": 28
+    },
+    "applied_at": "2024-11-02T18:00:00Z",
+    "status": "pending",
+    "ai_flags": [],
+    "score": 82.0,
+    "tier": "Fast-Track",
+    "score_breakdown": {
+      "answer_quality": 38.0,
+      "technical_skills": 14,
+      "github_quality": 20,
+      "ai_penalty": 0,
+      "completeness": 10,
+      "total": 82.0,
+      "details": {
+        "answers_llm": "Extremely high-quality technical response showing deep understanding of anti-detection techniques and reCAPTCHA bypass strategies. Demonstrates practical experience with specific, nuanced technical details.",
+        "skills": "domains={'scraping', 'python', 'web', 'devops', 'auth'}, kws=['playwright', 'requests', 'cdp', 'session', 'docker', 'kubernetes']",
+        "github": "repos=34, stars=91, non_forks=28, recent=True",
+        "ai_penalty": "no AI signals: []",
+        "completeness": "all fields present"
+      }
+    },
+    "rank": 8,
+    "percentile": 76.7
+  },
+  {
+    "id": "APP005",
+    "name": "Rohan Gupta",
+    "email": "rohan.gupta.ml@gmail.com",
+    "cover_letter": "I have spent the last year building data pipelines at a startup (unpaid but real work). We scrape job listings from 12 Indian job portals every 6 hours. Three of them have reCAPTCHA, two have Cloudflare, one does JS fingerprinting. I've fought all of these. Happy to talk through exactly what worked.",
+    "answers": [
+      {
+        "question": "How would you approach extracting data from a platform with reCAPTCHA and no public API?",
+        "answer": "Step 1: intercept the API. Open DevTools → Network → XHR filter → log in and browse → look for JSON responses with application data. 99% of modern platforms load data via AJAX even if the page looks server-rendered. Step 2: if the API requires session auth, grab cookies from a real login using CDP (chrome --remote-debugging-port=9222, then GET /json to list tabs, then WebSocket to run Network.getAllCookies). Step 3: replay with requests.Session — set all headers exactly as Chrome sends them. Use curl_cffi library instead of requests if you need TLS fingerprint matching. For 57 pages of 20 applicants each, add a 2-3s random delay between requests. Total time: ~3-4 minutes."
+      }
+    ],
+    "skills": [
+      "Python",
+      "Scrapy",
+      "curl_cffi",
+      "CDP",
+      "Redis",
+      "Kafka",
+      "airflow"
+    ],
+    "github_url": "https://github.com/rohangupta-data",
+    "github_info": {
+      "valid": true,
+      "username": "rohangupta-data",
+      "repos": 18,
+      "stars": 29,
+      "followers": 11,
+      "recent_activity": true,
+      "is_empty": false,
+      "non_fork_count": 15
+    },
+    "resume_url": "",
+    "applied_at": "2024-11-01T13:15:00Z",
+    "status": "pending",
+    "ai_flags": [],
+    "score": 81.0,
+    "tier": "Fast-Track",
+    "score_breakdown": {
+      "answer_quality": 38.0,
+      "technical_skills": 14,
+      "github_quality": 19,
+      "ai_penalty": 0,
+      "completeness": 10,
+      "total": 81.0,
+      "details": {
+        "answers_llm": "Extremely precise, technically sophisticated answer demonstrating real-world experience with advanced web scraping techniques. Shows deep understanding of session management, browser automation, and anti-bot countermeasures.",
+        "skills": "domains={'scraping', 'python', 'auth', 'data'}, kws=['scrapy', 'requests', 'curl_cffi', 'cdp', 'cookies', 'session']",
+        "github": "repos=18, stars=29, non_forks=15, recent=True",
+        "ai_penalty": "no AI signals: []",
+        "completeness": "all fields present"
+      }
+    },
+    "rank": 9,
+    "percentile": 73.3
+  },
+  {
+    "id": "APP007",
+    "name": "Nisha Kapoor",
+    "email": "nisha.kapoor.tech@gmail.com",
+    "cover_letter": "I built a tool called FormFetch (github.com/nishakapoor/formfetch) that extracts responses from Google Forms and Typeform for research purposes. The OAuth flows for both were painful to reverse-engineer. I'm comfortable with auth flows, token management, and browser automation.",
+    "answers": [
+      {
+        "question": "How would you approach extracting data from a platform with reCAPTCHA and no public API?",
+        "answer": "Two parallel tracks: (1) Try to find a hidden API by inspecting network traffic. If the platform is modern (React/Vue frontend) it definitely makes XHR/fetch calls. Capture those with Burp Suite or just DevTools. (2) If everything is SSR with no JSON endpoints, I'd do a real browser login with Playwright (non-headless, actual display), solve reCAPTCHA manually once, then immediately export the session via Playwright's storageState to a JSON file. Then all subsequent requests can use those cookies in a raw requests.Session without any browser overhead. The key is doing the manual login step from the same IP where I'll run the scraper."
+      }
+    ],
+    "skills": [
+      "Python",
+      "Playwright",
+      "Burp Suite",
+      "OAuth",
+      "FastAPI",
+      "SQLite"
+    ],
+    "github_url": "https://github.com/nishakapoor",
+    "github_info": {
+      "valid": true,
+      "username": "nishakapoor",
+      "repos": 14,
+      "stars": 22,
+      "followers": 9,
+      "recent_activity": true,
+      "is_empty": false,
+      "non_fork_count": 12
+    },
+    "resume_url": "",
+    "applied_at": "2024-11-01T14:20:00Z",
+    "status": "pending",
+    "ai_flags": [],
+    "score": 81.0,
+    "tier": "Fast-Track",
+    "score_breakdown": {
+      "answer_quality": 35.0,
+      "technical_skills": 18,
+      "github_quality": 18,
+      "ai_penalty": 0,
+      "completeness": 10,
+      "total": 81.0,
+      "details": {
+        "answers_llm": "Strong technical depth with specific implementation strategies, demonstrates real-world experience with auth flows and browser automation. Loses points for not addressing potential legal/ethical concerns of scraping.",
+        "skills": "domains={'data', 'scraping', 'python', 'web', 'auth'}, kws=['playwright', 'requests', 'burp suite', 'storagestate', 'cookies', 'session']",
+        "github": "repos=14, stars=22, non_forks=12, recent=True",
+        "ai_penalty": "no AI signals: []",
+        "completeness": "all fields present"
+      }
+    },
+    "rank": 10,
+    "percentile": 70.0
+  },
+  {
+    "id": "APP028",
+    "name": "Sakshi Thakur",
+    "email": "sakshi.thakur.fullstack@gmail.com",
+    "cover_letter": "I built and sold a SaaS tool for 2 years — a LinkedIn scraper for sales teams. It had to deal with LinkedIn's anti-bot measures which are significantly more sophisticated than Internshala's. I know session management, fingerprinting, and data extraction at production scale.",
+    "answers": [
+      {
+        "question": "How would you approach extracting data from a platform with reCAPTCHA and no public API?",
+        "answer": "LinkedIn experience translates directly: the approach that works is what I call 'human shadow' — a real logged-in Chrome instance that runs continuously, and your scraper talks to it via CDP rather than launching its own browser. The Chrome instance is authenticated and has a legit fingerprint. Your scraper just issues navigate and waitForSelector commands through the DevTools protocol. The human shadow approach is slower than direct API calls but much more stable than headless browsers. For Internshala: I'd find the XHR endpoint first (faster), fall back to human shadow if it needs JS execution to render."
+      }
+    ],
+    "skills": [
+      "Python",
+      "Node.js",
+      "CDP",
+      "PostgreSQL",
+      "Stripe API",
+      "React",
+      "Docker"
+    ],
+    "github_url": "https://github.com/sakshithakur-saas",
+    "github_info": {
+      "valid": true,
+      "username": "sakshithakur-saas",
+      "repos": 19,
+      "stars": 47,
+      "followers": 28,
+      "recent_activity": true,
+      "is_empty": false,
+      "non_fork_count": 16
+    },
+    "applied_at": "2024-11-03T09:00:00Z",
+    "status": "pending",
+    "ai_flags": [],
+    "score": 81.0,
+    "tier": "Fast-Track",
+    "score_breakdown": {
+      "answer_quality": 38.0,
+      "technical_skills": 14,
+      "github_quality": 19,
+      "ai_penalty": 0,
+      "completeness": 10,
+      "total": 81.0,
+      "details": {
+        "answers_llm": "Demonstrates deep technical understanding with specific, concrete implementation strategy drawn from real-world experience. Shows nuanced approach to complex web scraping challenges with clear technical depth.",
+        "skills": "domains={'data', 'python', 'web', 'devops', 'auth'}, kws=['cdp', 'session', 'postgresql', 'docker', 'python', 'react']",
+        "github": "repos=19, stars=47, non_forks=16, recent=True",
+        "ai_penalty": "no AI signals: []",
+        "completeness": "all fields present"
+      }
+    },
+    "rank": 11,
+    "percentile": 66.7
+  },
+  {
+    "id": "APP010",
+    "name": "Ananya Das",
+    "email": "ananya.das.scraper@gmail.com",
+    "cover_letter": "I run a freelance scraping service — 40+ clients, mostly e-commerce price monitoring and lead generation. I deal with anti-bot measures daily. Cloudflare, Akamai, Datadome, reCAPTCHA — I have working solutions for all of them in my toolkit.",
+    "answers": [
+      {
+        "question": "How would you approach extracting data from a platform with reCAPTCHA and no public API?",
+        "answer": "reCAPTCHA Enterprise invisible variant is triggered by form submit, not page load. So Playwright in non-headless mode with real user interaction (actual mouse movement to the form fields, realistic typing speed using page.type with delay parameter) often passes it because the behavior looks human. If that fails: Playwright storageState export after a manual login — grab cookies + localStorage in one JSON file, reuse in subsequent headless runs until expiry. For IP-bound sessions I never rotate IPs mid-session, only between sessions. I track session age and refresh proactively every 20 hours."
+      }
+    ],
+    "skills": [
+      "Python",
+      "Playwright",
+      "Scrapy",
+      "Cloudflare bypass",
+      "residential proxies",
+      "aiohttp",
+      "MongoDB"
+    ],
+    "github_url": "https://github.com/ananya-scraper",
+    "github_info": {
+      "valid": true,
+      "username": "ananya-scraper",
+      "repos": 8,
+      "stars": 15,
+      "followers": 6,
+      "recent_activity": true,
+      "is_empty": false,
+      "non_fork_count": 7
+    },
+    "resume_url": "",
+    "applied_at": "2024-11-01T16:30:00Z",
+    "status": "pending",
+    "ai_flags": [],
+    "score": 78.0,
+    "tier": "Standard",
+    "score_breakdown": {
+      "answer_quality": 35.0,
+      "technical_skills": 16,
+      "github_quality": 17,
+      "ai_penalty": 0,
+      "completeness": 10,
+      "total": 78.0,
+      "details": {
+        "answers_llm": "Strong technical depth with specific, practical implementation details demonstrating real-world experience. Slightly docked points for not discussing absolute fallback strategies if initial approaches fail.",
+        "skills": "domains={'async', 'data', 'scraping', 'python', 'auth'}, kws=['playwright', 'scrapy', 'aiohttp', 'storagestate', 'cookies', 'session']",
+        "github": "repos=8, stars=15, non_forks=7, recent=True",
+        "ai_penalty": "no AI signals: []",
+        "completeness": "all fields present"
+      }
+    },
+    "rank": 12,
+    "percentile": 63.3
+  },
+  {
+    "id": "APP024",
+    "name": "Neha Gupta",
+    "email": "neha.gupta.automation@gmail.com",
+    "cover_letter": "I work in QA automation at a product company (full-time, 1.5 years) and do freelance work on evenings. My day job is writing Playwright/Selenium test suites for internal apps. I know the difference between how a real browser and an automated one behaves at the HTTP level.",
+    "answers": [
+      {
+        "question": "How would you approach extracting data from a platform with reCAPTCHA and no public API?",
+        "answer": "In my QA role I've learned that reCAPTCHA Enterprise doesn't just check if you're using WebDriver — it checks dozens of signals: canvas fingerprint, AudioContext fingerprint, WebGL renderer, font enumeration, timing of DOM events. undetected-chromedriver patches some but not all of these. The most reliable method I've used: launch a real Chrome (not Chromium, actual Google Chrome) without the --headless flag, on a machine that has a real GPU. Log in. Then use Playwright's browser.contexts[0].storageState() to export the full session. This includes cookies AND localStorage AND sessionStorage. Replay it in a new browser context without a UI — this is different from headless, it's a background tab in a real Chrome process."
+      }
+    ],
+    "skills": [
+      "Python",
+      "Playwright",
+      "Selenium",
+      "pytest",
+      "TypeScript",
+      "REST API testing"
+    ],
+    "github_url": "https://github.com/nehagupta-auto",
+    "github_info": {
+      "valid": true,
+      "username": "nehagupta-auto",
+      "repos": 12,
+      "stars": 11,
+      "followers": 5,
+      "recent_activity": true,
+      "is_empty": false,
+      "non_fork_count": 10
+    },
+    "applied_at": "2024-11-02T16:00:00Z",
+    "status": "pending",
+    "ai_flags": [],
+    "score": 77.0,
+    "tier": "Standard",
+    "score_breakdown": {
+      "answer_quality": 35.0,
+      "technical_skills": 14,
+      "github_quality": 18,
+      "ai_penalty": 0,
+      "completeness": 10,
+      "total": 77.0,
+      "details": {
+        "answers_llm": "Strong technical depth showing real-world experience with browser automation challenges. Demonstrates nuanced understanding of reCAPTCHA detection mechanisms beyond surface-level knowledge.",
+        "skills": "domains={'scraping', 'python', 'web', 'auth'}, kws=['selenium', 'playwright', 'storagestate', 'cookies', 'session', 'python']",
+        "github": "repos=12, stars=11, non_forks=10, recent=True",
+        "ai_penalty": "no AI signals: []",
+        "completeness": "all fields present"
+      }
+    },
+    "rank": 13,
+    "percentile": 60.0
+  },
+  {
+    "id": "APP030",
+    "name": "Tanya Bhatia",
+    "email": "tanya.bhatia.research@gmail.com",
+    "cover_letter": "PhD student at IISc, research area is web measurement and censorship circumvention. I've published a paper on fingerprinting-resistant web crawlers. I have a very thorough understanding of how bot detection works at the browser, network, and behavioral level.",
+    "answers": [
+      {
+        "question": "How would you approach extracting data from a platform with reCAPTCHA and no public API?",
+        "answer": "reCAPTCHA Enterprise v3 uses a risk score (0.0-1.0) based on: IP reputation (checked against Google's database of suspicious IPs), browser fingerprint (canvas, WebGL, fonts, AudioContext), behavioral signals (mouse entropy, typing cadence, scroll patterns), and page interaction history. Headless browsers fail primarily on fingerprint and behavioral signals. My research approach: (1) Use a real browser on a residential IP with genuine interaction history — not a VPS IP which Google flags. (2) For the session: Playwright storageState captures the full auth context. Run on a home machine or use a residential proxy service with session stickiness. (3) For scale: the 57-page problem is trivial with async requests once you have auth — maybe 90 seconds total. The auth part is the hard problem."
+      }
+    ],
+    "skills": [
+      "Python",
+      "browser fingerprinting",
+      "network measurement",
+      "Tor",
+      "Playwright",
+      "statistical analysis",
+      "academic research"
+    ],
+    "github_url": "https://github.com/tanyabhatia-iisc",
+    "github_info": {
+      "valid": true,
+      "username": "tanyabhatia-iisc",
+      "repos": 11,
+      "stars": 156,
+      "followers": 73,
+      "recent_activity": true,
+      "is_empty": false,
+      "non_fork_count": 11
+    },
+    "applied_at": "2024-11-03T11:00:00Z",
+    "status": "pending",
+    "ai_flags": [],
+    "score": 77.0,
+    "tier": "Standard",
+    "score_breakdown": {
+      "answer_quality": 38.0,
+      "technical_skills": 12,
+      "github_quality": 17,
+      "ai_penalty": 0,
+      "completeness": 10,
+      "total": 77.0,
+      "details": {
+        "answers_llm": "Extremely precise technical understanding with specific implementation details demonstrating deep practical knowledge. Shows nuanced comprehension of reCAPTCHA Enterprise's actual detection mechanisms beyond surface-level understanding.",
+        "skills": "domains={'scraping', 'async', 'python', 'auth'}, kws=['playwright', 'requests', 'storagestate', 'session', 'async', 'python']",
+        "github": "repos=11, stars=156, non_forks=11, recent=True",
+        "ai_penalty": "no AI signals: []",
+        "completeness": "all fields present"
+      }
+    },
+    "rank": 14,
+    "percentile": 56.7
+  },
+  {
+    "id": "APP014",
+    "name": "Aarav Shah",
+    "email": "aarav.shah.dev@gmail.com",
+    "cover_letter": "I want to be honest: I haven't done large-scale scraping before but I've read extensively about the techniques. I built a small scraper for my college's notice board (public, no auth) using requests + BeautifulSoup. I know the theory behind CDP and session management, I just haven't implemented it at scale yet.",
+    "answers": [
+      {
+        "question": "How would you approach extracting data from a platform with reCAPTCHA and no public API?",
+        "answer": "I'd start by reading the reCAPTCHA Enterprise docs to understand exactly what signals it checks — I know it checks browser fingerprint, interaction patterns, and IP reputation. Then try Playwright in non-headless mode first since it exposes a real browser. If that fails, look into the CDP approach I've read about where you attach to a real Chrome session. I'm being honest that I'd need to spend a few hours experimenting and hitting failures before getting it right — but I learn fast and I'd document every failure and what I tried."
+      }
+    ],
+    "skills": [
+      "Python",
+      "requests",
+      "BeautifulSoup",
+      "SQL",
+      "Flask"
+    ],
+    "github_url": "https://github.com/aaravshah-dev",
+    "github_info": {
+      "valid": true,
+      "username": "aaravshah-dev",
+      "repos": 9,
+      "stars": 4,
+      "followers": 3,
+      "recent_activity": true,
+      "is_empty": false,
+      "non_fork_count": 9
+    },
+    "resume_url": "",
+    "applied_at": "2024-11-01T18:45:00Z",
+    "status": "pending",
+    "ai_flags": [],
+    "score": 59.0,
+    "tier": "Review",
+    "score_breakdown": {
+      "answer_quality": 22.0,
+      "technical_skills": 12,
+      "github_quality": 15,
+      "ai_penalty": 0,
+      "completeness": 10,
+      "total": 59.0,
+      "details": {
+        "answers_llm": "Shows genuine technical curiosity and understanding of reCAPTCHA challenges, but lacks concrete implementation experience. Demonstrates self-awareness about learning process and technical approach.",
+        "skills": "domains={'scraping', 'python', 'auth'}, kws=['playwright', 'beautifulsoup', 'requests', 'cdp', 'session', 'python']",
+        "github": "repos=9, stars=4, non_forks=9, recent=True",
+        "ai_penalty": "no AI signals: []",
+        "completeness": "all fields present"
+      }
+    },
+    "rank": 15,
+    "percentile": 53.3
+  },
+  {
+    "id": "APP017",
+    "name": "Tanmay Bhatt",
+    "email": "tanmay.bhatt2002@gmail.com",
+    "cover_letter": "I have good knowledge of Python and web scraping. I have done some projects using BeautifulSoup and Selenium. I am eager to learn more and contribute to your team.",
+    "answers": [
+      {
+        "question": "How would you approach extracting data from a platform with reCAPTCHA and no public API?",
+        "answer": "I would try to find if there is any API by checking the network requests. If not, I would use Selenium to log in and then scrape the pages. For reCAPTCHA, maybe I can find a solution online or use a service like 2captcha. Then use BeautifulSoup to parse the HTML and get the applicant details. Save to CSV or database."
+      }
+    ],
+    "skills": [
+      "Python",
+      "Selenium",
+      "BeautifulSoup",
+      "pandas"
+    ],
+    "github_url": "https://github.com/tanmaybhatt02",
+    "github_info": {
+      "valid": true,
+      "username": "tanmaybhatt02",
+      "repos": 6,
+      "stars": 1,
+      "followers": 2,
+      "recent_activity": true,
+      "is_empty": false,
+      "non_fork_count": 5
+    },
+    "resume_url": "",
+    "applied_at": "2024-11-02T10:30:00Z",
+    "status": "pending",
+    "ai_flags": [],
+    "score": 48.0,
+    "tier": "Review",
+    "score_breakdown": {
+      "answer_quality": 15.0,
+      "technical_skills": 10,
+      "github_quality": 13,
+      "ai_penalty": 0,
+      "completeness": 10,
+      "total": 48.0,
+      "details": {
+        "answers_llm": "Demonstrates basic web scraping knowledge but lacks sophisticated understanding of reCAPTCHA Enterprise challenges. Answer shows limited technical depth and relies on generic approaches without addressing session complexity.",
+        "skills": "domains={'scraping', 'python'}, kws=['selenium', 'beautifulsoup', 'requests', 'python', 'pandas']",
+        "github": "repos=6, stars=1, non_forks=5, recent=True",
+        "ai_penalty": "no AI signals: []",
+        "completeness": "all fields present"
+      }
+    },
+    "rank": 16,
+    "percentile": 50.0
+  },
+  {
+    "id": "APP022",
+    "name": "Simran Kaur",
+    "email": "simran.kaur.py@gmail.com",
+    "cover_letter": "Hi, I want to apply. I am a Python developer with 1 year of experience. I can learn anything quickly. Please give me a chance.",
+    "answers": [
+      {
+        "question": "How would you approach extracting data from a platform with reCAPTCHA and no public API?",
+        "answer": "First I would try to use Selenium to automate the login. For reCAPTCHA I would see if there is a way to bypass it. Then I would scrape each page and save the data. I would handle errors and retries. I would also make sure not to overload the server."
+      }
+    ],
+    "skills": [
+      "Python",
+      "Django",
+      "MySQL"
+    ],
+    "github_url": "https://github.com/simrankaur-py",
+    "github_info": {
+      "valid": true,
+      "username": "simrankaur-py",
+      "repos": 7,
+      "stars": 2,
+      "followers": 1,
+      "recent_activity": true,
+      "is_empty": false,
+      "non_fork_count": 6
+    },
+    "resume_url": "",
+    "applied_at": "2024-11-02T14:30:00Z",
+    "status": "pending",
+    "ai_flags": [],
+    "score": 43.0,
+    "tier": "Review",
+    "score_breakdown": {
+      "answer_quality": 12.0,
+      "technical_skills": 8,
+      "github_quality": 13,
+      "ai_penalty": 0,
+      "completeness": 10,
+      "total": 43.0,
+      "details": {
+        "answers_llm": "The applicant shows basic technical awareness but lacks depth and specific strategy. While mentioning key tools like Selenium, the answer lacks nuanced understanding of reCAPTCHA Enterprise challenges and sophisticated data extraction techniques.",
+        "skills": "domains={'scraping', 'python'}, kws=['selenium', 'python', 'django']",
+        "github": "repos=7, stars=2, non_forks=6, recent=True",
+        "ai_penalty": "no AI signals: []",
+        "completeness": "all fields present"
+      }
+    },
+    "rank": 17,
+    "percentile": 46.7
+  },
+  {
+    "id": "APP025",
+    "name": "Akash Pandey",
+    "email": "akash.pandey.dev@gmail.com",
+    "cover_letter": "I am a passionate developer eager to contribute. I have experience in Python and data science. I am a quick learner and will give my 100%.",
+    "answers": [
+      {
+        "question": "How would you approach extracting data from a platform with reCAPTCHA and no public API?",
+        "answer": "I would use Python with Selenium. First log in to the website. Then find the applicants page. Loop through all pages and get the data. Use try-except for error handling. Save data to CSV."
+      }
+    ],
+    "skills": [
+      "Python",
+      "pandas",
+      "NumPy"
+    ],
+    "github_url": "https://github.com/akashpandey-dev",
+    "github_info": {
+      "valid": true,
+      "username": "akashpandey-dev",
+      "repos": 5,
+      "stars": 0,
+      "followers": 0,
+      "recent_activity": true,
+      "is_empty": false,
+      "non_fork_count": 4
+    },
+    "applied_at": "2024-11-02T17:00:00Z",
+    "status": "pending",
+    "ai_flags": [],
+    "score": 40.0,
+    "tier": "Review",
+    "score_breakdown": {
+      "answer_quality": 10.0,
+      "technical_skills": 8,
+      "github_quality": 12,
+      "ai_penalty": 0,
+      "completeness": 10,
+      "total": 40.0,
+      "details": {
+        "answers_llm": "Answer shows basic technical understanding but lacks depth on reCAPTCHA challenge. Approach is simplistic and doesn't address the specific enterprise-level protection mechanisms.",
+        "skills": "domains={'scraping', 'python'}, kws=['selenium', 'python', 'pandas']",
+        "github": "repos=5, stars=0, non_forks=4, recent=True",
+        "ai_penalty": "no AI signals: []",
+        "completeness": "all fields present"
+      }
+    },
+    "rank": 18,
+    "percentile": 43.3
+  },
+  {
+    "id": "APP027",
+    "name": "Mohit Bansal",
+    "email": "mohit.bansal2002@gmail.com",
+    "cover_letter": "I would be happy to join this internship. I have strong problem-solving skills and a passion for technology. I am currently pursuing my B.Tech and looking for opportunities to apply my theoretical knowledge in a practical setting.",
+    "answers": [
+      {
+        "question": "How would you approach extracting data from a platform with reCAPTCHA and no public API?",
+        "answer": "Great question! I would approach this systematically. First, I would research the reCAPTCHA implementation to understand its mechanism. Then I would use undetected-chromedriver which is specifically designed to bypass detection. I would also implement proxy rotation to distribute requests and avoid IP bans. Furthermore, I would add random delays between requests to mimic human behavior. The data would then be parsed using BeautifulSoup and stored in a database for further processing. I hope this helps!"
+      }
+    ],
+    "skills": [
+      "Python",
+      "C++",
+      "Data Structures"
+    ],
+    "github_url": "https://github.com/mohitbansal02",
+    "github_info": {
+      "valid": true,
+      "username": "mohitbansal02",
+      "repos": 8,
+      "stars": 0,
+      "followers": 0,
+      "recent_activity": false,
+      "is_empty": true,
+      "non_fork_count": 3
+    },
+    "applied_at": "2024-11-02T19:00:00Z",
+    "status": "pending",
+    "ai_flags": [
+      "i would be happy to",
+      "great question!",
+      "furthermore,",
+      "i hope this helps"
+    ],
+    "score": 37.0,
+    "tier": "Reject",
+    "score_breakdown": {
+      "answer_quality": 22.0,
+      "technical_skills": 8,
+      "github_quality": 2,
+      "ai_penalty": -5,
+      "completeness": 10,
+      "total": 37.0,
+      "details": {
+        "answers_llm": "The answer shows technical awareness and specific strategies, but lacks deep technical depth and concrete implementation details. While mentioning tools like undetected-chromedriver and BeautifulSoup, the response feels somewhat generic and doesn't demonstrate proven experience.",
+        "skills": "domains={'scraping', 'python'}, kws=['beautifulsoup', 'requests', 'python']",
+        "github": "empty profile",
+        "ai_penalty": "moderate AI signal: ['i would be happy to', 'great question!', 'furthermore,', 'i hope this helps']",
+        "completeness": "all fields present"
+      }
+    },
+    "rank": 19,
+    "percentile": 40.0
+  },
+  {
+    "id": "APP009",
+    "name": "Meera Joshi",
+    "email": "meera.joshi99@gmail.com",
+    "cover_letter": "I would like to apply for this internship opportunity. I have knowledge of Python and have completed online courses in web scraping. I am hardworking and dedicated.",
+    "answers": [
+      {
+        "question": "How would you approach extracting data from a platform with reCAPTCHA and no public API?",
+        "answer": "I would use Selenium WebDriver to automate the browser and handle the login. For reCAPTCHA I would look into using 2captcha service to solve it automatically. Then use BeautifulSoup to parse the pages and extract the data. Store everything in a CSV file."
+      }
+    ],
+    "skills": [
+      "Python",
+      "Selenium",
+      "BeautifulSoup"
+    ],
+    "github_url": "https://github.com/meerajoshi99",
+    "github_info": {
+      "valid": true,
+      "username": "meerajoshi99",
+      "repos": 3,
+      "stars": 0,
+      "followers": 0,
+      "recent_activity": false,
+      "is_empty": true,
+      "non_fork_count": 1
+    },
+    "resume_url": "",
+    "applied_at": "2024-11-01T15:45:00Z",
+    "status": "pending",
+    "ai_flags": [],
+    "score": 35.0,
+    "tier": "Reject",
+    "score_breakdown": {
+      "answer_quality": 15.0,
+      "technical_skills": 8,
+      "github_quality": 2,
+      "ai_penalty": 0,
+      "completeness": 10,
+      "total": 35.0,
+      "details": {
+        "answers_llm": "Demonstrates basic technical understanding but lacks depth and nuanced problem-solving. Shows awareness of tools but not sophisticated strategies for handling complex web scraping challenges.",
+        "skills": "domains={'scraping', 'python'}, kws=['selenium', 'beautifulsoup', 'python']",
+        "github": "empty profile",
+        "ai_penalty": "no AI signals: []",
+        "completeness": "all fields present"
+      }
+    },
+    "rank": 20,
+    "percentile": 36.7
+  },
+  {
+    "id": "APP002",
+    "name": "Priya Sharma",
+    "email": "priya.sharma.dev@gmail.com",
+    "cover_letter": "I'd be happy to help with this role. I have comprehensive knowledge of web technologies and I'm passionate about leveraging cutting-edge solutions to solve complex problems. In today's rapidly evolving landscape of technology, it's crucial to have team members who can adapt and grow. I believe I would be a great fit for your team.",
+    "answers": [
+      {
+        "question": "How would you approach extracting data from a platform with reCAPTCHA and no public API?",
+        "answer": "I would use a comprehensive approach that leverages multiple strategies. First and foremost, I would utilize Selenium WebDriver with a headless browser to automate the login process. Furthermore, I would implement robust error handling to ensure seamless execution. It's worth noting that BeautifulSoup would be ideal for parsing the HTML content once we have access. Last but not least, I would make sure to handle pagination efficiently to extract all the data."
+      }
+    ],
+    "skills": [
+      "Python",
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "github_url": "https://github.com/priyasharma_dev",
+    "github_info": {
+      "valid": true,
+      "username": "priyasharma_dev",
+      "repos": 2,
+      "stars": 0,
+      "followers": 0,
+      "recent_activity": false,
+      "is_empty": true,
+      "non_fork_count": 0
+    },
+    "resume_url": "",
+    "applied_at": "2024-11-01T10:05:00Z",
+    "status": "pending",
+    "ai_flags": [
+      "comprehensive overview",
+      "i'd be happy to",
+      "last but not least",
+      "it's worth noting",
+      "leverage",
+      "in today's rapidly evolving",
+      "first and foremost",
+      "furthermore,"
+    ],
+    "score": 27.0,
+    "tier": "Reject",
+    "score_breakdown": {
+      "answer_quality": 15.0,
+      "technical_skills": 10,
+      "github_quality": 2,
+      "ai_penalty": -10,
+      "completeness": 10,
+      "total": 27.0,
+      "details": {
+        "answers_llm": "Applicant demonstrates surface-level technical knowledge but lacks specific implementation details for reCAPTCHA bypass. Answers are generic and do not address the core challenge of IP-bound sessions and enterprise-level bot protection.",
+        "skills": "domains={'scraping', 'python', 'web'}, kws=['selenium', 'beautifulsoup', 'python', 'javascript']",
+        "github": "empty profile",
+        "ai_penalty": "strong AI signal: ['comprehensive overview', \"i'd be happy to\", 'last but not least', \"it's worth noting\"]",
+        "completeness": "all fields present"
+      }
+    },
+    "rank": 21,
+    "percentile": 33.3
+  },
+  {
+    "id": "APP029",
+    "name": "Pranav Joshi",
+    "email": "pranav.joshi2003@gmail.com",
+    "cover_letter": "I have completed Python courses on Coursera and Udemy. I am looking for my first internship to gain practical experience. I am willing to work hard and learn.",
+    "answers": [
+      {
+        "question": "How would you approach extracting data from a platform with reCAPTCHA and no public API?",
+        "answer": "I would use Selenium for this. First automate the login, then scrape the pages. I know about BeautifulSoup for parsing HTML. I would also handle pagination by finding the next page button and clicking it."
+      }
+    ],
+    "skills": [
+      "Python",
+      "basic Selenium"
+    ],
+    "github_url": "",
+    "github_info": {
+      "valid": false,
+      "reason": "no_url"
+    },
+    "applied_at": "2024-11-03T10:00:00Z",
+    "status": "pending",
+    "ai_flags": [],
+    "score": 26.0,
+    "tier": "Reject",
+    "score_breakdown": {
+      "answer_quality": 10.0,
+      "technical_skills": 8,
+      "github_quality": 0,
+      "ai_penalty": 0,
+      "completeness": 8,
+      "total": 26.0,
+      "details": {
+        "answers_llm": "Demonstrates basic awareness of web scraping techniques but lacks sophisticated understanding of reCAPTCHA challenges. Answer shows limited practical experience and no specific strategy for handling enterprise-level bot protection.",
+        "skills": "domains={'scraping', 'python'}, kws=['selenium', 'beautifulsoup', 'python']",
+        "github": "invalid (no_url)",
+        "ai_penalty": "no AI signals: []",
+        "completeness": "missing: ['github_url']"
+      }
+    },
+    "rank": 22,
+    "percentile": 30.0
+  },
+  {
+    "id": "APP006",
+    "name": "Aditya Verma",
+    "email": "aditya.verma2002@gmail.com",
+    "cover_letter": "As an AI enthusiast I am deeply passionate about leveraging artificial intelligence to solve real-world problems. I have a strong foundation in machine learning and data science. I would be delighted to bring my expertise to your esteemed organization and contribute to your mission.",
+    "answers": [
+      {
+        "question": "How would you approach extracting data from a platform with reCAPTCHA and no public API?",
+        "answer": "In today's rapidly evolving technological landscape, web scraping has become a crucial skill. I would approach this challenge with a comprehensive multi-faceted strategy. First and foremost, I would utilize Selenium with undetected-chromedriver to bypass the reCAPTCHA. Furthermore, I would implement robust session management and cookie handling. It's important to note that we should also consider using rotating proxies to avoid IP bans. In addition to this, BeautifulSoup would help parse the HTML efficiently. Rest assured that with this approach, we can extract all the necessary data."
+      }
+    ],
+    "skills": [
+      "Python",
+      "TensorFlow",
+      "Keras",
+      "scikit-learn",
+      "Pandas"
+    ],
+    "github_url": "https://github.com/adityaverma-ai",
+    "github_info": {
+      "valid": true,
+      "username": "adityaverma-ai",
+      "repos": 4,
+      "stars": 0,
+      "followers": 1,
+      "recent_activity": false,
+      "is_empty": true,
+      "non_fork_count": 1
+    },
+    "resume_url": "",
+    "applied_at": "2024-11-01T13:40:00Z",
+    "status": "pending",
+    "ai_flags": [
+      "it's important to note",
+      "comprehensive",
+      "as an ai",
+      "rest assured",
+      "in today's rapidly evolving",
+      "first and foremost",
+      "furthermore,"
+    ],
+    "score": 24.0,
+    "tier": "Reject",
+    "score_breakdown": {
+      "answer_quality": 12.0,
+      "technical_skills": 10,
+      "github_quality": 2,
+      "ai_penalty": -10,
+      "completeness": 10,
+      "total": 24.0,
+      "details": {
+        "answers_llm": "Demonstrates some technical awareness but lacks specific implementation details and shows limited practical experience. Answers are generic and rely on surface-level techniques without addressing the nuanced challenges of reCAPTCHA Enterprise and IP-bound sessions.",
+        "skills": "domains={'scraping', 'python', 'auth'}, kws=['selenium', 'beautifulsoup', 'session', 'python', 'pandas']",
+        "github": "empty profile",
+        "ai_penalty": "strong AI signal: [\"it's important to note\", 'comprehensive', 'as an ai', 'rest assured']",
+        "completeness": "all fields present"
+      }
+    },
+    "rank": 23,
+    "percentile": 26.7
+  },
+  {
+    "id": "APP023",
+    "name": "Harsh Mishra",
+    "email": "harsh.mishra.scrape@gmail.com",
+    "cover_letter": "I would be happy to assist with this internship opportunity. Leveraging my comprehensive skill set in software development, I can help drive value for your organization. I believe in utilizing cutting-edge technologies to solve complex challenges in today's rapidly evolving digital ecosystem.",
+    "answers": [
+      {
+        "question": "How would you approach extracting data from a platform with reCAPTCHA and no public API?",
+        "answer": "I would be happy to tackle this challenging problem. Here's a comprehensive overview: In today's rapidly evolving technological landscape, dealing with reCAPTCHA requires a nuanced approach. First and foremost, we need to analyze the specific reCAPTCHA implementation. Furthermore, I would delve into the use of undetected-chromedriver and rotating proxies. It's worth noting that we should also consider ethical implications. Moving forward, the solution would involve: automated cookie management, intelligent retry mechanisms, and robust error handling. Rest assured that my approach would be both effective and responsible."
+      }
+    ],
+    "skills": [
+      "Python",
+      "JavaScript",
+      "Node.js"
+    ],
+    "github_url": "https://github.com/harshmishra23",
+    "github_info": {
+      "valid": true,
+      "username": "harshmishra23",
+      "repos": 4,
+      "stars": 0,
+      "followers": 0,
+      "recent_activity": false,
+      "is_empty": true,
+      "non_fork_count": 2
+    },
+    "applied_at": "2024-11-02T15:00:00Z",
+    "status": "pending",
+    "ai_flags": [
+      "comprehensive overview",
+      "here's a comprehensive overview",
+      "delve into",
+      "moving forward",
+      "it's worth noting",
+      "leverage",
+      "i would be happy to",
+      "rest assured",
+      "here's a comprehensive",
+      "in today's rapidly evolving",
+      "first and foremost",
+      "furthermore,"
+    ],
+    "score": 22.0,
+    "tier": "Reject",
+    "score_breakdown": {
+      "answer_quality": 12.0,
+      "technical_skills": 8,
+      "github_quality": 2,
+      "ai_penalty": -10,
+      "completeness": 10,
+      "total": 22.0,
+      "details": {
+        "answers_llm": "The applicant uses buzzwords and vague language without demonstrating specific technical knowledge or concrete implementation details. The answer lacks depth and shows minimal understanding of the actual technical challenges of bypassing reCAPTCHA.",
+        "skills": "domains={'python', 'web'}, kws=['python', 'javascript', 'node.js']",
+        "github": "empty profile",
+        "ai_penalty": "strong AI signal: ['comprehensive overview', \"here's a comprehensive overview\", 'delve into', 'moving forward']",
+        "completeness": "all fields present"
+      }
+    },
+    "rank": 24,
+    "percentile": 23.3
+  },
+  {
+    "id": "APP013",
+    "name": "Pooja Nair",
+    "email": "pooja.nair.mlops@gmail.com",
+    "cover_letter": "Yeh internship ke liye apply kar rahi hoon. Mujhe Python aata hai aur main web scraping seekh rahi hoon. Main bahut mehnat karti hoon.",
+    "answers": [
+      {
+        "question": "How would you approach extracting data from a platform with reCAPTCHA and no public API?",
+        "answer": "Main Selenium use karungi aur phir BeautifulSoup se data extract karungi. reCAPTCHA ke liye koi third party service try karungi."
+      }
+    ],
+    "skills": [
+      "Python",
+      "basic HTML"
+    ],
+    "github_url": "",
+    "github_info": {
+      "valid": false,
+      "reason": "no_url"
+    },
+    "resume_url": "",
+    "applied_at": "2024-11-01T18:00:00Z",
+    "status": "pending",
+    "ai_flags": [],
+    "score": 21.0,
+    "tier": "Reject",
+    "score_breakdown": {
+      "answer_quality": 5.0,
+      "technical_skills": 8,
+      "github_quality": 0,
+      "ai_penalty": 0,
+      "completeness": 8,
+      "total": 21.0,
+      "details": {
+        "answers_llm": "Answers are in Hindi and demonstrate very basic, superficial understanding with no technical depth. Shows minimal awareness of web scraping challenges but lacks specific problem-solving strategy.",
+        "skills": "domains={'scraping', 'python'}, kws=['selenium', 'beautifulsoup', 'python']",
+        "github": "invalid (no_url)",
+        "ai_penalty": "no AI signals: []",
+        "completeness": "missing: ['github_url']"
+      }
+    },
+    "rank": 25,
+    "percentile": 20.0
+  },
+  {
+    "id": "APP011",
+    "name": "Rahul Tiwari",
+    "email": "rahul.tiwari2003@gmail.com",
+    "cover_letter": "I would be happy to help with this internship. I have comprehensive knowledge of various programming languages and frameworks. I am passionate about technology and eager to learn new things.",
+    "answers": [
+      {
+        "question": "How would you approach extracting data from a platform with reCAPTCHA and no public API?",
+        "answer": "In today's rapidly evolving digital landscape, data extraction has become increasingly important. I would leverage a comprehensive suite of tools including Selenium for browser automation, BeautifulSoup for HTML parsing, and pandas for data processing. Furthermore, I would implement robust error handling and retry mechanisms. It's worth noting that we should also consider the ethical and legal implications of web scraping. Here's a comprehensive overview of my approach: first, authenticate with the platform, then systematically extract data page by page."
+      }
+    ],
+    "skills": [
+      "Python",
+      "Java",
+      "C++"
+    ],
+    "github_url": "https://github.com/rahultiwari2003",
+    "github_info": {
+      "valid": true,
+      "username": "rahultiwari2003",
+      "repos": 5,
+      "stars": 0,
+      "followers": 0,
+      "recent_activity": false,
+      "is_empty": true,
+      "non_fork_count": 2
+    },
+    "resume_url": "",
+    "applied_at": "2024-11-01T16:55:00Z",
+    "status": "pending",
+    "ai_flags": [
+      "comprehensive overview",
+      "here's a comprehensive overview",
+      "it's worth noting",
+      "leverage",
+      "i would be happy to",
+      "comprehensive",
+      "here's a comprehensive",
+      "in today's rapidly evolving",
+      "furthermore,"
+    ],
+    "score": 20.0,
+    "tier": "Reject",
+    "score_breakdown": {
+      "answer_quality": 10.0,
+      "technical_skills": 8,
+      "github_quality": 2,
+      "ai_penalty": -10,
+      "completeness": 10,
+      "total": 20.0,
+      "details": {
+        "answers_llm": "Applicant demonstrates surface-level technical knowledge but lacks specific technical strategy for bypassing reCAPTCHA. Answers are generic and do not address the unique challenges of IP-bound sessions and enterprise-level bot protection.",
+        "skills": "domains={'scraping', 'python'}, kws=['selenium', 'beautifulsoup', 'python', 'pandas']",
+        "github": "empty profile",
+        "ai_penalty": "strong AI signal: ['comprehensive overview', \"here's a comprehensive overview\", \"it's worth noting\", 'leverage']",
+        "completeness": "all fields present"
+      }
+    },
+    "rank": 26,
+    "percentile": 16.7
+  },
+  {
+    "id": "APP015",
+    "name": "Ishaan Kumar",
+    "email": "ishaan.kumar.scraper@gmail.com",
+    "cover_letter": "I would be happy to help with this internship. I have comprehensive skills in software development and I'm passionate about creating innovative solutions. As an AI language model, I understand that this role requires technical expertise which I am well-equipped to provide.",
+    "answers": [
+      {
+        "question": "How would you approach extracting data from a platform with reCAPTCHA and no public API?",
+        "answer": "Certainly! Here's a comprehensive overview of my approach to this challenging problem. In today's rapidly evolving landscape of web technologies, dealing with anti-bot measures requires a multi-faceted strategy. First and foremost, I would utilize undetected-chromedriver, a specialized library that modifies ChromeDriver to avoid detection. Furthermore, I would implement sophisticated proxy rotation to distribute requests across multiple IP addresses. It's worth noting that we should also consider using browser fingerprint spoofing techniques. Last but not least, I would ensure robust error handling and logging throughout the system."
+      }
+    ],
+    "skills": [
+      "Python",
+      "JavaScript",
+      "React"
+    ],
+    "github_url": "https://github.com/ishaankumar15",
+    "github_info": {
+      "valid": true,
+      "username": "ishaankumar15",
+      "repos": 2,
+      "stars": 0,
+      "followers": 0,
+      "recent_activity": false,
+      "is_empty": true,
+      "non_fork_count": 0
+    },
+    "resume_url": "",
+    "applied_at": "2024-11-01T19:00:00Z",
+    "status": "pending",
+    "ai_flags": [
+      "comprehensive overview",
+      "here's a comprehensive overview",
+      "last but not least",
+      "it's worth noting",
+      "certainly! here",
+      "i would be happy to",
+      "as an ai",
+      "here's a comprehensive",
+      "in today's rapidly evolving",
+      "first and foremost",
+      "furthermore,",
+      "as an ai language model"
+    ],
+    "score": 20.0,
+    "tier": "Reject",
+    "score_breakdown": {
+      "answer_quality": 8.0,
+      "technical_skills": 10,
+      "github_quality": 2,
+      "ai_penalty": -10,
+      "completeness": 10,
+      "total": 20.0,
+      "details": {
+        "answers_llm": "Applicant demonstrates some technical awareness but lacks concrete implementation details and practical experience. Answers sound theoretical and potentially AI-generated without showing genuine hands-on problem-solving skills.",
+        "skills": "domains={'scraping', 'python', 'web'}, kws=['requests', 'python', 'javascript', 'react']",
+        "github": "empty profile",
+        "ai_penalty": "strong AI signal: ['comprehensive overview', \"here's a comprehensive overview\", 'last but not least', \"it's worth noting\"]",
+        "completeness": "all fields present"
+      }
+    },
+    "rank": 27,
+    "percentile": 13.3
+  },
+  {
+    "id": "APP018",
+    "name": "Ritika Jain",
+    "email": "ritika.jain.aiml@gmail.com",
+    "cover_letter": "I would be happy to join your team. I have a strong foundation in artificial intelligence and machine learning. Leveraging my expertise in these cutting-edge technologies, I can help your organization achieve its goals. I am passionate about utilizing AI to solve real-world challenges.",
+    "answers": [
+      {
+        "question": "How would you approach extracting data from a platform with reCAPTCHA and no public API?",
+        "answer": "Needless to say, this is a complex problem that requires a sophisticated approach. Going forward, I would utilize advanced browser automation techniques. First and foremost, we need to understand the reCAPTCHA implementation. Furthermore, rotating proxies would help distribute the load. In terms of data extraction, BeautifulSoup or lxml would be ideal for parsing. Moving forward, I would ensure that the solution is scalable and maintainable. Rest assured that I have the technical skills to handle this challenge."
+      }
+    ],
+    "skills": [
+      "Python",
+      "machine learning",
+      "NLP"
+    ],
+    "github_url": "https://github.com/ritikajain-ml",
+    "github_info": {
+      "valid": true,
+      "username": "ritikajain-ml",
+      "repos": 3,
+      "stars": 0,
+      "followers": 0,
+      "recent_activity": false,
+      "is_empty": true,
+      "non_fork_count": 1
+    },
+    "resume_url": "",
+    "applied_at": "2024-11-02T11:00:00Z",
+    "status": "pending",
+    "ai_flags": [
+      "going forward",
+      "moving forward",
+      "needless to say",
+      "leverage",
+      "i would be happy to",
+      "rest assured",
+      "first and foremost",
+      "furthermore,"
+    ],
+    "score": 20.0,
+    "tier": "Reject",
+    "score_breakdown": {
+      "answer_quality": 12.0,
+      "technical_skills": 6,
+      "github_quality": 2,
+      "ai_penalty": -10,
+      "completeness": 10,
+      "total": 20.0,
+      "details": {
+        "answers_llm": "Applicant demonstrates some technical awareness but lacks concrete implementation details and specific technical strategy. Answers are vague and filled with generic consulting-speak rather than showing genuine technical problem-solving experience.",
+        "skills": "domains={'scraping', 'python'}, kws=['beautifulsoup', 'python']",
+        "github": "empty profile",
+        "ai_penalty": "strong AI signal: ['going forward', 'moving forward', 'needless to say', 'leverage']",
+        "completeness": "all fields present"
+      }
+    },
+    "rank": 28,
+    "percentile": 10.0
+  },
+  {
+    "id": "APP004",
+    "name": "Sneha Reddy",
+    "email": "snehareddy2001@gmail.com",
+    "cover_letter": "I am writing to express my interest in this position. I have experience with Python and web development. I am a quick learner and a team player. I look forward to contributing to your organization.",
+    "answers": [
+      {
+        "question": "How would you approach extracting data from a platform with reCAPTCHA and no public API?",
+        "answer": "Use Selenium."
+      }
+    ],
+    "skills": [
+      "Python",
+      "HTML"
+    ],
+    "github_url": "",
+    "github_info": {
+      "valid": false,
+      "reason": "no_url"
+    },
+    "resume_url": "",
+    "applied_at": "2024-11-01T12:00:00Z",
+    "status": "pending",
+    "ai_flags": [],
+    "score": 19.0,
+    "tier": "Reject",
+    "score_breakdown": {
+      "answer_quality": 5.0,
+      "technical_skills": 6,
+      "github_quality": 0,
+      "ai_penalty": 0,
+      "completeness": 8,
+      "total": 19.0,
+      "details": {
+        "answers_llm": "Extremely minimal response showing no depth of understanding. Uses a single tool suggestion without explaining implementation details or addressing reCAPTCHA challenges.",
+        "skills": "domains={'scraping', 'python'}, kws=['selenium', 'python']",
+        "github": "invalid (no_url)",
+        "ai_penalty": "no AI signals: []",
+        "completeness": "missing: ['github_url']"
+      }
+    },
+    "rank": 29,
+    "percentile": 6.7
+  },
+  {
+    "id": "APP020",
+    "name": "Deepa Krishnan",
+    "email": "deepa.krishnan2001@gmail.com",
+    "cover_letter": "I am a 3rd year student. I know Python, C, Java. I have done 2 projects — a calculator app and a todo list. I want to learn more about web development.",
+    "answers": [
+      {
+        "question": "How would you approach extracting data from a platform with reCAPTCHA and no public API?",
+        "answer": "I am not very familiar with web scraping but I would try to learn and figure it out. Maybe use Selenium?"
+      }
+    ],
+    "skills": [
+      "Python",
+      "C",
+      "Java"
+    ],
+    "github_url": "",
+    "github_info": {
+      "valid": false,
+      "reason": "no_url"
+    },
+    "resume_url": "",
+    "applied_at": "2024-11-02T13:00:00Z",
+    "status": "pending",
+    "ai_flags": [],
+    "score": 19.0,
+    "tier": "Reject",
+    "score_breakdown": {
+      "answer_quality": 5.0,
+      "technical_skills": 6,
+      "github_quality": 0,
+      "ai_penalty": 0,
+      "completeness": 8,
+      "total": 19.0,
+      "details": {
+        "answers_llm": "Applicant shows minimal technical understanding and lacks specific knowledge about handling reCAPTCHA challenges. Answer is vague and suggests no practical experience with web scraping or anti-bot techniques.",
+        "skills": "domains={'scraping', 'python'}, kws=['selenium', 'python']",
+        "github": "invalid (no_url)",
+        "ai_penalty": "no AI signals: []",
+        "completeness": "missing: ['github_url']"
+      }
+    },
+    "rank": 30,
+    "percentile": 3.3
+  }
+]

@@ -1,0 +1,729 @@
+{
+  "APP025": {
+    "name": "Akash Pandey",
+    "strikes": [
+      {
+        "reason": "SUSPICIOUS_PATTERN",
+        "details": {
+          "flags": [
+            "heavy filler language: ['passionate', 'quick learner', 'give my 100']"
+          ]
+        },
+        "at": "2026-04-05T15:52:29.557421"
+      }
+    ],
+    "eliminated": false
+  },
+  "APP027": {
+    "name": "Mohit Bansal",
+    "strikes": [
+      {
+        "reason": "SUSPICIOUS_PATTERN",
+        "details": {
+          "flags": [
+            "AI phrase density 3.6/100words \u2014 very high"
+          ]
+        },
+        "at": "2026-04-05T15:52:29.557421"
+      },
+      {
+        "reason": "SUSPICIOUS_PATTERN",
+        "details": {
+          "flags": [
+            "AI phrase density 3.6/100 words (4 phrases in 112 words)"
+          ],
+          "details": {
+            "ai_phrase_density": {
+              "density": 3.57,
+              "count": 4,
+              "examples": [
+                "i would be happy to",
+                "great question",
+                "furthermore,",
+                "i hope this helps"
+              ]
+            },
+            "topic_keywords_found": [
+              "beautifulsoup",
+              "captcha",
+              "ip",
+              "proxy",
+              "recaptcha",
+              "requests"
+            ]
+          },
+          "word_count": 112
+        },
+        "at": "2026-04-05T16:17:45.093931"
+      },
+      {
+        "reason": "SUSPICIOUS_PATTERN",
+        "details": {
+          "flags": [
+            "AI phrase density 3.6/100 words (4 phrases in 112 words)"
+          ],
+          "details": {
+            "ai_phrase_density": {
+              "density": 3.57,
+              "count": 4,
+              "examples": [
+                "i would be happy to",
+                "great question",
+                "furthermore,",
+                "i hope this helps"
+              ]
+            },
+            "topic_keywords_found": [
+              "beautifulsoup",
+              "captcha",
+              "ip",
+              "proxy",
+              "recaptcha",
+              "requests"
+            ]
+          },
+          "word_count": 112
+        },
+        "at": "2026-04-05T16:18:16.138185"
+      }
+    ],
+    "eliminated": true,
+    "elimination_reason": "Auto-eliminated: 3 strikes (SUSPICIOUS_PATTERN, SUSPICIOUS_PATTERN, SUSPICIOUS_PATTERN)"
+  },
+  "APP002": {
+    "name": "Priya Sharma",
+    "strikes": [
+      {
+        "reason": "SUSPICIOUS_PATTERN",
+        "details": {
+          "flags": [
+            "AI phrase density 6.3/100words \u2014 very high"
+          ]
+        },
+        "at": "2026-04-05T15:52:29.558424"
+      },
+      {
+        "reason": "AI_GENERATED",
+        "details": {
+          "composite_score": 1.0,
+          "vocab_sim": 0.0,
+          "phrase_sim": 0.0,
+          "struct_sim": 0.0,
+          "matched_phrases": [
+            "i'd be happy to",
+            "in today's rapidly evolving",
+            "first and foremost",
+            "last but not least",
+            "it's worth noting",
+            "furthermore,"
+          ],
+          "method": "phrases_only",
+          "reason": "8 AI phrases found"
+        },
+        "at": "2026-04-05T16:17:45.031648"
+      },
+      {
+        "reason": "SUSPICIOUS_PATTERN",
+        "details": {
+          "flags": [
+            "AI phrase density 6.3/100 words (8 phrases in 127 words)"
+          ],
+          "details": {
+            "ai_phrase_density": {
+              "density": 6.3,
+              "count": 8,
+              "examples": [
+                "i'd be happy to",
+                "in today's rapidly evolving",
+                "first and foremost",
+                "last but not least"
+              ]
+            },
+            "topic_keywords_found": [
+              "api",
+              "beautifulsoup",
+              "browser",
+              "headless",
+              "ip",
+              "login",
+              "selenium"
+            ]
+          },
+          "word_count": 127
+        },
+        "at": "2026-04-05T16:17:45.095068"
+      },
+      {
+        "reason": "SUSPICIOUS_PATTERN",
+        "details": {
+          "flags": [
+            "AI phrase density 6.3/100 words (8 phrases in 127 words)"
+          ],
+          "details": {
+            "ai_phrase_density": {
+              "density": 6.3,
+              "count": 8,
+              "examples": [
+                "i'd be happy to",
+                "in today's rapidly evolving",
+                "first and foremost",
+                "last but not least"
+              ]
+            },
+            "topic_keywords_found": [
+              "api",
+              "beautifulsoup",
+              "browser",
+              "headless",
+              "ip",
+              "login",
+              "selenium"
+            ]
+          },
+          "word_count": 127
+        },
+        "at": "2026-04-05T16:18:16.139195"
+      }
+    ],
+    "eliminated": true,
+    "elimination_reason": "Auto-eliminated: 3 strikes (SUSPICIOUS_PATTERN, AI_GENERATED, SUSPICIOUS_PATTERN)"
+  },
+  "APP006": {
+    "name": "Aditya Verma",
+    "strikes": [
+      {
+        "reason": "SUSPICIOUS_PATTERN",
+        "details": {
+          "flags": [
+            "AI phrase density 5.4/100words \u2014 very high"
+          ]
+        },
+        "at": "2026-04-05T15:52:29.558424"
+      },
+      {
+        "reason": "AI_GENERATED",
+        "details": {
+          "composite_score": 0.9323,
+          "vocab_sim": 0.0,
+          "phrase_sim": 0.0,
+          "struct_sim": 0.0,
+          "matched_phrases": [
+            "in today's rapidly evolving",
+            "first and foremost",
+            "it's important to note",
+            "furthermore,",
+            "rest assured",
+            "as an ai"
+          ],
+          "method": "phrases_only",
+          "reason": "6 AI phrases found"
+        },
+        "at": "2026-04-05T16:17:45.032649"
+      },
+      {
+        "reason": "SUSPICIOUS_PATTERN",
+        "details": {
+          "flags": [
+            "AI phrase density 4.6/100 words (6 phrases in 130 words)"
+          ],
+          "details": {
+            "ai_phrase_density": {
+              "density": 4.62,
+              "count": 6,
+              "examples": [
+                "in today's rapidly evolving",
+                "first and foremost",
+                "it's important to note",
+                "furthermore,"
+              ]
+            },
+            "topic_keywords_found": [
+              "api",
+              "beautifulsoup",
+              "captcha",
+              "cookie",
+              "ip",
+              "proxies",
+              "recaptcha",
+              "scraping",
+              "selenium",
+              "session"
+            ]
+          },
+          "word_count": 130
+        },
+        "at": "2026-04-05T16:17:45.095068"
+      },
+      {
+        "reason": "SUSPICIOUS_PATTERN",
+        "details": {
+          "flags": [
+            "AI phrase density 4.6/100 words (6 phrases in 130 words)"
+          ],
+          "details": {
+            "ai_phrase_density": {
+              "density": 4.62,
+              "count": 6,
+              "examples": [
+                "in today's rapidly evolving",
+                "first and foremost",
+                "it's important to note",
+                "furthermore,"
+              ]
+            },
+            "topic_keywords_found": [
+              "api",
+              "beautifulsoup",
+              "captcha",
+              "cookie",
+              "ip",
+              "proxies",
+              "recaptcha",
+              "scraping",
+              "selenium",
+              "session"
+            ]
+          },
+          "word_count": 130
+        },
+        "at": "2026-04-05T16:18:16.140933"
+      }
+    ],
+    "eliminated": true,
+    "elimination_reason": "Auto-eliminated: 3 strikes (SUSPICIOUS_PATTERN, AI_GENERATED, SUSPICIOUS_PATTERN)"
+  },
+  "APP023": {
+    "name": "Harsh Mishra",
+    "strikes": [
+      {
+        "reason": "SUSPICIOUS_PATTERN",
+        "details": {
+          "flags": [
+            "AI phrase density 9.4/100words \u2014 very high"
+          ]
+        },
+        "at": "2026-04-05T15:52:29.559424"
+      },
+      {
+        "reason": "AI_GENERATED",
+        "details": {
+          "composite_score": 1.0,
+          "vocab_sim": 0.0,
+          "phrase_sim": 0.0,
+          "struct_sim": 0.0,
+          "matched_phrases": [
+            "i would be happy to",
+            "here's a comprehensive",
+            "comprehensive overview",
+            "in today's rapidly evolving",
+            "first and foremost",
+            "it's worth noting"
+          ],
+          "method": "phrases_only",
+          "reason": "11 AI phrases found"
+        },
+        "at": "2026-04-05T16:17:45.032649"
+      },
+      {
+        "reason": "SUSPICIOUS_PATTERN",
+        "details": {
+          "flags": [
+            "AI phrase density 8.6/100 words (11 phrases in 128 words)"
+          ],
+          "details": {
+            "ai_phrase_density": {
+              "density": 8.59,
+              "count": 11,
+              "examples": [
+                "i would be happy to",
+                "here's a comprehensive",
+                "comprehensive overview",
+                "in today's rapidly evolving"
+              ]
+            },
+            "topic_keywords_found": [
+              "api",
+              "captcha",
+              "cookie",
+              "ip",
+              "proxies",
+              "recaptcha"
+            ]
+          },
+          "word_count": 128
+        },
+        "at": "2026-04-05T16:17:45.095068"
+      },
+      {
+        "reason": "SUSPICIOUS_PATTERN",
+        "details": {
+          "flags": [
+            "AI phrase density 8.6/100 words (11 phrases in 128 words)"
+          ],
+          "details": {
+            "ai_phrase_density": {
+              "density": 8.59,
+              "count": 11,
+              "examples": [
+                "i would be happy to",
+                "here's a comprehensive",
+                "comprehensive overview",
+                "in today's rapidly evolving"
+              ]
+            },
+            "topic_keywords_found": [
+              "api",
+              "captcha",
+              "cookie",
+              "ip",
+              "proxies",
+              "recaptcha"
+            ]
+          },
+          "word_count": 128
+        },
+        "at": "2026-04-05T16:18:16.140933"
+      }
+    ],
+    "eliminated": true,
+    "elimination_reason": "Auto-eliminated: 3 strikes (SUSPICIOUS_PATTERN, AI_GENERATED, SUSPICIOUS_PATTERN)"
+  },
+  "APP011": {
+    "name": "Rahul Tiwari",
+    "strikes": [
+      {
+        "reason": "SUSPICIOUS_PATTERN",
+        "details": {
+          "flags": [
+            "AI phrase density 8.3/100words \u2014 very high"
+          ]
+        },
+        "at": "2026-04-05T15:52:29.559424"
+      },
+      {
+        "reason": "AI_GENERATED",
+        "details": {
+          "composite_score": 1.0,
+          "vocab_sim": 0.0,
+          "phrase_sim": 0.0,
+          "struct_sim": 0.0,
+          "matched_phrases": [
+            "i would be happy to",
+            "here's a comprehensive",
+            "comprehensive overview",
+            "in today's rapidly evolving",
+            "it's worth noting",
+            "furthermore,"
+          ],
+          "method": "phrases_only",
+          "reason": "7 AI phrases found"
+        },
+        "at": "2026-04-05T16:17:45.032649"
+      },
+      {
+        "reason": "SUSPICIOUS_PATTERN",
+        "details": {
+          "flags": [
+            "AI phrase density 6.4/100 words (7 phrases in 109 words)"
+          ],
+          "details": {
+            "ai_phrase_density": {
+              "density": 6.42,
+              "count": 7,
+              "examples": [
+                "i would be happy to",
+                "here's a comprehensive",
+                "comprehensive overview",
+                "in today's rapidly evolving"
+              ]
+            },
+            "topic_keywords_found": [
+              "api",
+              "authenticate",
+              "beautifulsoup",
+              "browser",
+              "ip",
+              "scraping",
+              "selenium"
+            ]
+          },
+          "word_count": 109
+        },
+        "at": "2026-04-05T16:17:45.096068"
+      },
+      {
+        "reason": "SUSPICIOUS_PATTERN",
+        "details": {
+          "flags": [
+            "AI phrase density 6.4/100 words (7 phrases in 109 words)"
+          ],
+          "details": {
+            "ai_phrase_density": {
+              "density": 6.42,
+              "count": 7,
+              "examples": [
+                "i would be happy to",
+                "here's a comprehensive",
+                "comprehensive overview",
+                "in today's rapidly evolving"
+              ]
+            },
+            "topic_keywords_found": [
+              "api",
+              "authenticate",
+              "beautifulsoup",
+              "browser",
+              "ip",
+              "scraping",
+              "selenium"
+            ]
+          },
+          "word_count": 109
+        },
+        "at": "2026-04-05T16:18:16.142937"
+      }
+    ],
+    "eliminated": true,
+    "elimination_reason": "Auto-eliminated: 3 strikes (SUSPICIOUS_PATTERN, AI_GENERATED, SUSPICIOUS_PATTERN)"
+  },
+  "APP015": {
+    "name": "Ishaan Kumar",
+    "strikes": [
+      {
+        "reason": "SUSPICIOUS_PATTERN",
+        "details": {
+          "flags": [
+            "AI phrase density 9.4/100words \u2014 very high"
+          ]
+        },
+        "at": "2026-04-05T15:52:29.559424"
+      },
+      {
+        "reason": "AI_GENERATED",
+        "details": {
+          "composite_score": 1.0,
+          "vocab_sim": 0.0,
+          "phrase_sim": 0.0,
+          "struct_sim": 0.0,
+          "matched_phrases": [
+            "i would be happy to",
+            "certainly!",
+            "here's a comprehensive",
+            "comprehensive overview",
+            "in today's rapidly evolving",
+            "first and foremost"
+          ],
+          "method": "phrases_only",
+          "reason": "11 AI phrases found"
+        },
+        "at": "2026-04-05T16:17:45.034160"
+      },
+      {
+        "reason": "SUSPICIOUS_PATTERN",
+        "details": {
+          "flags": [
+            "AI phrase density 8.6/100 words (11 phrases in 128 words)"
+          ],
+          "details": {
+            "ai_phrase_density": {
+              "density": 8.59,
+              "count": 11,
+              "examples": [
+                "i would be happy to",
+                "certainly!",
+                "here's a comprehensive",
+                "comprehensive overview"
+              ]
+            },
+            "topic_keywords_found": [
+              "api",
+              "browser",
+              "fingerprint",
+              "ip",
+              "proxy",
+              "requests"
+            ]
+          },
+          "word_count": 128
+        },
+        "at": "2026-04-05T16:17:45.096573"
+      },
+      {
+        "reason": "SUSPICIOUS_PATTERN",
+        "details": {
+          "flags": [
+            "AI phrase density 8.6/100 words (11 phrases in 128 words)"
+          ],
+          "details": {
+            "ai_phrase_density": {
+              "density": 8.59,
+              "count": 11,
+              "examples": [
+                "i would be happy to",
+                "certainly!",
+                "here's a comprehensive",
+                "comprehensive overview"
+              ]
+            },
+            "topic_keywords_found": [
+              "api",
+              "browser",
+              "fingerprint",
+              "ip",
+              "proxy",
+              "requests"
+            ]
+          },
+          "word_count": 128
+        },
+        "at": "2026-04-05T16:18:16.143941"
+      }
+    ],
+    "eliminated": true,
+    "elimination_reason": "Auto-eliminated: 3 strikes (SUSPICIOUS_PATTERN, AI_GENERATED, SUSPICIOUS_PATTERN)"
+  },
+  "APP018": {
+    "name": "Ritika Jain",
+    "strikes": [
+      {
+        "reason": "SUSPICIOUS_PATTERN",
+        "details": {
+          "flags": [
+            "AI phrase density 6.6/100words \u2014 very high"
+          ]
+        },
+        "at": "2026-04-05T15:52:29.559424"
+      },
+      {
+        "reason": "AI_GENERATED",
+        "details": {
+          "composite_score": 1.0,
+          "vocab_sim": 0.0,
+          "phrase_sim": 0.0,
+          "struct_sim": 0.0,
+          "matched_phrases": [
+            "i would be happy to",
+            "needless to say",
+            "first and foremost",
+            "furthermore,",
+            "moving forward",
+            "going forward"
+          ],
+          "method": "phrases_only",
+          "reason": "8 AI phrases found"
+        },
+        "at": "2026-04-05T16:17:45.035259"
+      },
+      {
+        "reason": "SUSPICIOUS_PATTERN",
+        "details": {
+          "flags": [
+            "AI phrase density 6.6/100 words (8 phrases in 121 words)"
+          ],
+          "details": {
+            "ai_phrase_density": {
+              "density": 6.61,
+              "count": 8,
+              "examples": [
+                "i would be happy to",
+                "needless to say",
+                "first and foremost",
+                "furthermore,"
+              ]
+            },
+            "topic_keywords_found": [
+              "beautifulsoup",
+              "browser",
+              "captcha",
+              "proxies",
+              "recaptcha"
+            ]
+          },
+          "word_count": 121
+        },
+        "at": "2026-04-05T16:17:45.096573"
+      },
+      {
+        "reason": "SUSPICIOUS_PATTERN",
+        "details": {
+          "flags": [
+            "AI phrase density 6.6/100 words (8 phrases in 121 words)"
+          ],
+          "details": {
+            "ai_phrase_density": {
+              "density": 6.61,
+              "count": 8,
+              "examples": [
+                "i would be happy to",
+                "needless to say",
+                "first and foremost",
+                "furthermore,"
+              ]
+            },
+            "topic_keywords_found": [
+              "beautifulsoup",
+              "browser",
+              "captcha",
+              "proxies",
+              "recaptcha"
+            ]
+          },
+          "word_count": 121
+        },
+        "at": "2026-04-05T16:18:16.144454"
+      }
+    ],
+    "eliminated": true,
+    "elimination_reason": "Auto-eliminated: 3 strikes (SUSPICIOUS_PATTERN, AI_GENERATED, SUSPICIOUS_PATTERN)"
+  },
+  "APP004": {
+    "name": "Sneha Reddy",
+    "strikes": [
+      {
+        "reason": "SUSPICIOUS_PATTERN",
+        "details": {
+          "flags": [
+            "heavy filler language: ['quick learner', 'team player', 'look forward to contributing']"
+          ]
+        },
+        "at": "2026-04-05T15:52:29.560424"
+      },
+      {
+        "reason": "SUSPICIOUS_PATTERN",
+        "details": {
+          "flags": [
+            "heavy generic filler language (3 instances): ['quick learner', 'team player', 'look forward to contributing']"
+          ],
+          "details": {
+            "filler_language": [
+              "quick learner",
+              "team player",
+              "look forward to contributing"
+            ]
+          },
+          "word_count": 37
+        },
+        "at": "2026-04-05T16:17:45.097581"
+      },
+      {
+        "reason": "SUSPICIOUS_PATTERN",
+        "details": {
+          "flags": [
+            "heavy generic filler language (3 instances): ['quick learner', 'team player', 'look forward to contributing']"
+          ],
+          "details": {
+            "filler_language": [
+              "quick learner",
+              "team player",
+              "look forward to contributing"
+            ]
+          },
+          "word_count": 37
+        },
+        "at": "2026-04-05T16:18:16.144454"
+      }
+    ],
+    "eliminated": true,
+    "elimination_reason": "Auto-eliminated: 3 strikes (SUSPICIOUS_PATTERN, SUSPICIOUS_PATTERN, SUSPICIOUS_PATTERN)"
+  }
+}

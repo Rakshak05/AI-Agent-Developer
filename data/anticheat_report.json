@@ -1,0 +1,1176 @@
+{
+  "run_at": "2026-04-05T16:18:16.158267",
+  "candidates_checked": 30,
+  "total_flagged": 9,
+  "total_eliminated": 8,
+  "copy_rings_found": 0,
+  "strikes": {
+    "APP025": {
+      "name": "Akash Pandey",
+      "strikes": [
+        {
+          "reason": "SUSPICIOUS_PATTERN",
+          "details": {
+            "flags": [
+              "heavy filler language: ['passionate', 'quick learner', 'give my 100']"
+            ]
+          },
+          "at": "2026-04-05T15:52:29.557421"
+        }
+      ],
+      "eliminated": false
+    },
+    "APP027": {
+      "name": "Mohit Bansal",
+      "strikes": [
+        {
+          "reason": "SUSPICIOUS_PATTERN",
+          "details": {
+            "flags": [
+              "AI phrase density 3.6/100words \u2014 very high"
+            ]
+          },
+          "at": "2026-04-05T15:52:29.557421"
+        },
+        {
+          "reason": "SUSPICIOUS_PATTERN",
+          "details": {
+            "flags": [
+              "AI phrase density 3.6/100 words (4 phrases in 112 words)"
+            ],
+            "details": {
+              "ai_phrase_density": {
+                "density": 3.57,
+                "count": 4,
+                "examples": [
+                  "i would be happy to",
+                  "great question",
+                  "furthermore,",
+                  "i hope this helps"
+                ]
+              },
+              "topic_keywords_found": [
+                "beautifulsoup",
+                "captcha",
+                "ip",
+                "proxy",
+                "recaptcha",
+                "requests"
+              ]
+            },
+            "word_count": 112
+          },
+          "at": "2026-04-05T16:17:45.093931"
+        },
+        {
+          "reason": "SUSPICIOUS_PATTERN",
+          "details": {
+            "flags": [
+              "AI phrase density 3.6/100 words (4 phrases in 112 words)"
+            ],
+            "details": {
+              "ai_phrase_density": {
+                "density": 3.57,
+                "count": 4,
+                "examples": [
+                  "i would be happy to",
+                  "great question",
+                  "furthermore,",
+                  "i hope this helps"
+                ]
+              },
+              "topic_keywords_found": [
+                "beautifulsoup",
+                "captcha",
+                "ip",
+                "proxy",
+                "recaptcha",
+                "requests"
+              ]
+            },
+            "word_count": 112
+          },
+          "at": "2026-04-05T16:18:16.138185"
+        }
+      ],
+      "eliminated": true,
+      "elimination_reason": "Auto-eliminated: 3 strikes (SUSPICIOUS_PATTERN, SUSPICIOUS_PATTERN, SUSPICIOUS_PATTERN)"
+    },
+    "APP002": {
+      "name": "Priya Sharma",
+      "strikes": [
+        {
+          "reason": "SUSPICIOUS_PATTERN",
+          "details": {
+            "flags": [
+              "AI phrase density 6.3/100words \u2014 very high"
+            ]
+          },
+          "at": "2026-04-05T15:52:29.558424"
+        },
+        {
+          "reason": "AI_GENERATED",
+          "details": {
+            "composite_score": 1.0,
+            "vocab_sim": 0.0,
+            "phrase_sim": 0.0,
+            "struct_sim": 0.0,
+            "matched_phrases": [
+              "i'd be happy to",
+              "in today's rapidly evolving",
+              "first and foremost",
+              "last but not least",
+              "it's worth noting",
+              "furthermore,"
+            ],
+            "method": "phrases_only",
+            "reason": "8 AI phrases found"
+          },
+          "at": "2026-04-05T16:17:45.031648"
+        },
+        {
+          "reason": "SUSPICIOUS_PATTERN",
+          "details": {
+            "flags": [
+              "AI phrase density 6.3/100 words (8 phrases in 127 words)"
+            ],
+            "details": {
+              "ai_phrase_density": {
+                "density": 6.3,
+                "count": 8,
+                "examples": [
+                  "i'd be happy to",
+                  "in today's rapidly evolving",
+                  "first and foremost",
+                  "last but not least"
+                ]
+              },
+              "topic_keywords_found": [
+                "api",
+                "beautifulsoup",
+                "browser",
+                "headless",
+                "ip",
+                "login",
+                "selenium"
+              ]
+            },
+            "word_count": 127
+          },
+          "at": "2026-04-05T16:17:45.095068"
+        },
+        {
+          "reason": "SUSPICIOUS_PATTERN",
+          "details": {
+            "flags": [
+              "AI phrase density 6.3/100 words (8 phrases in 127 words)"
+            ],
+            "details": {
+              "ai_phrase_density": {
+                "density": 6.3,
+                "count": 8,
+                "examples": [
+                  "i'd be happy to",
+                  "in today's rapidly evolving",
+                  "first and foremost",
+                  "last but not least"
+                ]
+              },
+              "topic_keywords_found": [
+                "api",
+                "beautifulsoup",
+                "browser",
+                "headless",
+                "ip",
+                "login",
+                "selenium"
+              ]
+            },
+            "word_count": 127
+          },
+          "at": "2026-04-05T16:18:16.139195"
+        }
+      ],
+      "eliminated": true,
+      "elimination_reason": "Auto-eliminated: 3 strikes (SUSPICIOUS_PATTERN, AI_GENERATED, SUSPICIOUS_PATTERN)"
+    },
+    "APP006": {
+      "name": "Aditya Verma",
+      "strikes": [
+        {
+          "reason": "SUSPICIOUS_PATTERN",
+          "details": {
+            "flags": [
+              "AI phrase density 5.4/100words \u2014 very high"
+            ]
+          },
+          "at": "2026-04-05T15:52:29.558424"
+        },
+        {
+          "reason": "AI_GENERATED",
+          "details": {
+            "composite_score": 0.9323,
+            "vocab_sim": 0.0,
+            "phrase_sim": 0.0,
+            "struct_sim": 0.0,
+            "matched_phrases": [
+              "in today's rapidly evolving",
+              "first and foremost",
+              "it's important to note",
+              "furthermore,",
+              "rest assured",
+              "as an ai"
+            ],
+            "method": "phrases_only",
+            "reason": "6 AI phrases found"
+          },
+          "at": "2026-04-05T16:17:45.032649"
+        },
+        {
+          "reason": "SUSPICIOUS_PATTERN",
+          "details": {
+            "flags": [
+              "AI phrase density 4.6/100 words (6 phrases in 130 words)"
+            ],
+            "details": {
+              "ai_phrase_density": {
+                "density": 4.62,
+                "count": 6,
+                "examples": [
+                  "in today's rapidly evolving",
+                  "first and foremost",
+                  "it's important to note",
+                  "furthermore,"
+                ]
+              },
+              "topic_keywords_found": [
+                "api",
+                "beautifulsoup",
+                "captcha",
+                "cookie",
+                "ip",
+                "proxies",
+                "recaptcha",
+                "scraping",
+                "selenium",
+                "session"
+              ]
+            },
+            "word_count": 130
+          },
+          "at": "2026-04-05T16:17:45.095068"
+        },
+        {
+          "reason": "SUSPICIOUS_PATTERN",
+          "details": {
+            "flags": [
+              "AI phrase density 4.6/100 words (6 phrases in 130 words)"
+            ],
+            "details": {
+              "ai_phrase_density": {
+                "density": 4.62,
+                "count": 6,
+                "examples": [
+                  "in today's rapidly evolving",
+                  "first and foremost",
+                  "it's important to note",
+                  "furthermore,"
+                ]
+              },
+              "topic_keywords_found": [
+                "api",
+                "beautifulsoup",
+                "captcha",
+                "cookie",
+                "ip",
+                "proxies",
+                "recaptcha",
+                "scraping",
+                "selenium",
+                "session"
+              ]
+            },
+            "word_count": 130
+          },
+          "at": "2026-04-05T16:18:16.140933"
+        }
+      ],
+      "eliminated": true,
+      "elimination_reason": "Auto-eliminated: 3 strikes (SUSPICIOUS_PATTERN, AI_GENERATED, SUSPICIOUS_PATTERN)"
+    },
+    "APP023": {
+      "name": "Harsh Mishra",
+      "strikes": [
+        {
+          "reason": "SUSPICIOUS_PATTERN",
+          "details": {
+            "flags": [
+              "AI phrase density 9.4/100words \u2014 very high"
+            ]
+          },
+          "at": "2026-04-05T15:52:29.559424"
+        },
+        {
+          "reason": "AI_GENERATED",
+          "details": {
+            "composite_score": 1.0,
+            "vocab_sim": 0.0,
+            "phrase_sim": 0.0,
+            "struct_sim": 0.0,
+            "matched_phrases": [
+              "i would be happy to",
+              "here's a comprehensive",
+              "comprehensive overview",
+              "in today's rapidly evolving",
+              "first and foremost",
+              "it's worth noting"
+            ],
+            "method": "phrases_only",
+            "reason": "11 AI phrases found"
+          },
+          "at": "2026-04-05T16:17:45.032649"
+        },
+        {
+          "reason": "SUSPICIOUS_PATTERN",
+          "details": {
+            "flags": [
+              "AI phrase density 8.6/100 words (11 phrases in 128 words)"
+            ],
+            "details": {
+              "ai_phrase_density": {
+                "density": 8.59,
+                "count": 11,
+                "examples": [
+                  "i would be happy to",
+                  "here's a comprehensive",
+                  "comprehensive overview",
+                  "in today's rapidly evolving"
+                ]
+              },
+              "topic_keywords_found": [
+                "api",
+                "captcha",
+                "cookie",
+                "ip",
+                "proxies",
+                "recaptcha"
+              ]
+            },
+            "word_count": 128
+          },
+          "at": "2026-04-05T16:17:45.095068"
+        },
+        {
+          "reason": "SUSPICIOUS_PATTERN",
+          "details": {
+            "flags": [
+              "AI phrase density 8.6/100 words (11 phrases in 128 words)"
+            ],
+            "details": {
+              "ai_phrase_density": {
+                "density": 8.59,
+                "count": 11,
+                "examples": [
+                  "i would be happy to",
+                  "here's a comprehensive",
+                  "comprehensive overview",
+                  "in today's rapidly evolving"
+                ]
+              },
+              "topic_keywords_found": [
+                "api",
+                "captcha",
+                "cookie",
+                "ip",
+                "proxies",
+                "recaptcha"
+              ]
+            },
+            "word_count": 128
+          },
+          "at": "2026-04-05T16:18:16.140933"
+        }
+      ],
+      "eliminated": true,
+      "elimination_reason": "Auto-eliminated: 3 strikes (SUSPICIOUS_PATTERN, AI_GENERATED, SUSPICIOUS_PATTERN)"
+    },
+    "APP011": {
+      "name": "Rahul Tiwari",
+      "strikes": [
+        {
+          "reason": "SUSPICIOUS_PATTERN",
+          "details": {
+            "flags": [
+              "AI phrase density 8.3/100words \u2014 very high"
+            ]
+          },
+          "at": "2026-04-05T15:52:29.559424"
+        },
+        {
+          "reason": "AI_GENERATED",
+          "details": {
+            "composite_score": 1.0,
+            "vocab_sim": 0.0,
+            "phrase_sim": 0.0,
+            "struct_sim": 0.0,
+            "matched_phrases": [
+              "i would be happy to",
+              "here's a comprehensive",
+              "comprehensive overview",
+              "in today's rapidly evolving",
+              "it's worth noting",
+              "furthermore,"
+            ],
+            "method": "phrases_only",
+            "reason": "7 AI phrases found"
+          },
+          "at": "2026-04-05T16:17:45.032649"
+        },
+        {
+          "reason": "SUSPICIOUS_PATTERN",
+          "details": {
+            "flags": [
+              "AI phrase density 6.4/100 words (7 phrases in 109 words)"
+            ],
+            "details": {
+              "ai_phrase_density": {
+                "density": 6.42,
+                "count": 7,
+                "examples": [
+                  "i would be happy to",
+                  "here's a comprehensive",
+                  "comprehensive overview",
+                  "in today's rapidly evolving"
+                ]
+              },
+              "topic_keywords_found": [
+                "api",
+                "authenticate",
+                "beautifulsoup",
+                "browser",
+                "ip",
+                "scraping",
+                "selenium"
+              ]
+            },
+            "word_count": 109
+          },
+          "at": "2026-04-05T16:17:45.096068"
+        },
+        {
+          "reason": "SUSPICIOUS_PATTERN",
+          "details": {
+            "flags": [
+              "AI phrase density 6.4/100 words (7 phrases in 109 words)"
+            ],
+            "details": {
+              "ai_phrase_density": {
+                "density": 6.42,
+                "count": 7,
+                "examples": [
+                  "i would be happy to",
+                  "here's a comprehensive",
+                  "comprehensive overview",
+                  "in today's rapidly evolving"
+                ]
+              },
+              "topic_keywords_found": [
+                "api",
+                "authenticate",
+                "beautifulsoup",
+                "browser",
+                "ip",
+                "scraping",
+                "selenium"
+              ]
+            },
+            "word_count": 109
+          },
+          "at": "2026-04-05T16:18:16.142937"
+        }
+      ],
+      "eliminated": true,
+      "elimination_reason": "Auto-eliminated: 3 strikes (SUSPICIOUS_PATTERN, AI_GENERATED, SUSPICIOUS_PATTERN)"
+    },
+    "APP015": {
+      "name": "Ishaan Kumar",
+      "strikes": [
+        {
+          "reason": "SUSPICIOUS_PATTERN",
+          "details": {
+            "flags": [
+              "AI phrase density 9.4/100words \u2014 very high"
+            ]
+          },
+          "at": "2026-04-05T15:52:29.559424"
+        },
+        {
+          "reason": "AI_GENERATED",
+          "details": {
+            "composite_score": 1.0,
+            "vocab_sim": 0.0,
+            "phrase_sim": 0.0,
+            "struct_sim": 0.0,
+            "matched_phrases": [
+              "i would be happy to",
+              "certainly!",
+              "here's a comprehensive",
+              "comprehensive overview",
+              "in today's rapidly evolving",
+              "first and foremost"
+            ],
+            "method": "phrases_only",
+            "reason": "11 AI phrases found"
+          },
+          "at": "2026-04-05T16:17:45.034160"
+        },
+        {
+          "reason": "SUSPICIOUS_PATTERN",
+          "details": {
+            "flags": [
+              "AI phrase density 8.6/100 words (11 phrases in 128 words)"
+            ],
+            "details": {
+              "ai_phrase_density": {
+                "density": 8.59,
+                "count": 11,
+                "examples": [
+                  "i would be happy to",
+                  "certainly!",
+                  "here's a comprehensive",
+                  "comprehensive overview"
+                ]
+              },
+              "topic_keywords_found": [
+                "api",
+                "browser",
+                "fingerprint",
+                "ip",
+                "proxy",
+                "requests"
+              ]
+            },
+            "word_count": 128
+          },
+          "at": "2026-04-05T16:17:45.096573"
+        },
+        {
+          "reason": "SUSPICIOUS_PATTERN",
+          "details": {
+            "flags": [
+              "AI phrase density 8.6/100 words (11 phrases in 128 words)"
+            ],
+            "details": {
+              "ai_phrase_density": {
+                "density": 8.59,
+                "count": 11,
+                "examples": [
+                  "i would be happy to",
+                  "certainly!",
+                  "here's a comprehensive",
+                  "comprehensive overview"
+                ]
+              },
+              "topic_keywords_found": [
+                "api",
+                "browser",
+                "fingerprint",
+                "ip",
+                "proxy",
+                "requests"
+              ]
+            },
+            "word_count": 128
+          },
+          "at": "2026-04-05T16:18:16.143941"
+        }
+      ],
+      "eliminated": true,
+      "elimination_reason": "Auto-eliminated: 3 strikes (SUSPICIOUS_PATTERN, AI_GENERATED, SUSPICIOUS_PATTERN)"
+    },
+    "APP018": {
+      "name": "Ritika Jain",
+      "strikes": [
+        {
+          "reason": "SUSPICIOUS_PATTERN",
+          "details": {
+            "flags": [
+              "AI phrase density 6.6/100words \u2014 very high"
+            ]
+          },
+          "at": "2026-04-05T15:52:29.559424"
+        },
+        {
+          "reason": "AI_GENERATED",
+          "details": {
+            "composite_score": 1.0,
+            "vocab_sim": 0.0,
+            "phrase_sim": 0.0,
+            "struct_sim": 0.0,
+            "matched_phrases": [
+              "i would be happy to",
+              "needless to say",
+              "first and foremost",
+              "furthermore,",
+              "moving forward",
+              "going forward"
+            ],
+            "method": "phrases_only",
+            "reason": "8 AI phrases found"
+          },
+          "at": "2026-04-05T16:17:45.035259"
+        },
+        {
+          "reason": "SUSPICIOUS_PATTERN",
+          "details": {
+            "flags": [
+              "AI phrase density 6.6/100 words (8 phrases in 121 words)"
+            ],
+            "details": {
+              "ai_phrase_density": {
+                "density": 6.61,
+                "count": 8,
+                "examples": [
+                  "i would be happy to",
+                  "needless to say",
+                  "first and foremost",
+                  "furthermore,"
+                ]
+              },
+              "topic_keywords_found": [
+                "beautifulsoup",
+                "browser",
+                "captcha",
+                "proxies",
+                "recaptcha"
+              ]
+            },
+            "word_count": 121
+          },
+          "at": "2026-04-05T16:17:45.096573"
+        },
+        {
+          "reason": "SUSPICIOUS_PATTERN",
+          "details": {
+            "flags": [
+              "AI phrase density 6.6/100 words (8 phrases in 121 words)"
+            ],
+            "details": {
+              "ai_phrase_density": {
+                "density": 6.61,
+                "count": 8,
+                "examples": [
+                  "i would be happy to",
+                  "needless to say",
+                  "first and foremost",
+                  "furthermore,"
+                ]
+              },
+              "topic_keywords_found": [
+                "beautifulsoup",
+                "browser",
+                "captcha",
+                "proxies",
+                "recaptcha"
+              ]
+            },
+            "word_count": 121
+          },
+          "at": "2026-04-05T16:18:16.144454"
+        }
+      ],
+      "eliminated": true,
+      "elimination_reason": "Auto-eliminated: 3 strikes (SUSPICIOUS_PATTERN, AI_GENERATED, SUSPICIOUS_PATTERN)"
+    },
+    "APP004": {
+      "name": "Sneha Reddy",
+      "strikes": [
+        {
+          "reason": "SUSPICIOUS_PATTERN",
+          "details": {
+            "flags": [
+              "heavy filler language: ['quick learner', 'team player', 'look forward to contributing']"
+            ]
+          },
+          "at": "2026-04-05T15:52:29.560424"
+        },
+        {
+          "reason": "SUSPICIOUS_PATTERN",
+          "details": {
+            "flags": [
+              "heavy generic filler language (3 instances): ['quick learner', 'team player', 'look forward to contributing']"
+            ],
+            "details": {
+              "filler_language": [
+                "quick learner",
+                "team player",
+                "look forward to contributing"
+              ]
+            },
+            "word_count": 37
+          },
+          "at": "2026-04-05T16:17:45.097581"
+        },
+        {
+          "reason": "SUSPICIOUS_PATTERN",
+          "details": {
+            "flags": [
+              "heavy generic filler language (3 instances): ['quick learner', 'team player', 'look forward to contributing']"
+            ],
+            "details": {
+              "filler_language": [
+                "quick learner",
+                "team player",
+                "look forward to contributing"
+              ]
+            },
+            "word_count": 37
+          },
+          "at": "2026-04-05T16:18:16.144454"
+        }
+      ],
+      "eliminated": true,
+      "elimination_reason": "Auto-eliminated: 3 strikes (SUSPICIOUS_PATTERN, SUSPICIOUS_PATTERN, SUSPICIOUS_PATTERN)"
+    }
+  },
+  "copy_rings": [],
+  "ai_detection_scores": {
+    "APP012": {
+      "score": 0.2299,
+      "strike": false,
+      "method": "llm+phrases",
+      "breakdown": {
+        "vocab_sim": 0.3682,
+        "phrase_sim": 0.0,
+        "struct_sim": 0.5054,
+        "phrase_score": 0.0
+      },
+      "matched_phrases": [],
+      "reason": "score below threshold"
+    },
+    "APP001": {
+      "score": 0.2474,
+      "strike": false,
+      "method": "llm+phrases",
+      "breakdown": {
+        "vocab_sim": 0.4225,
+        "phrase_sim": 0.0,
+        "struct_sim": 0.4977,
+        "phrase_score": 0.0
+      },
+      "matched_phrases": [],
+      "reason": "vocab overlap 42%"
+    },
+    "APP003": {
+      "score": 0.244,
+      "strike": false,
+      "method": "llm+phrases",
+      "breakdown": {
+        "vocab_sim": 0.4227,
+        "phrase_sim": 0.0,
+        "struct_sim": 0.4804,
+        "phrase_score": 0.0
+      },
+      "matched_phrases": [],
+      "reason": "vocab overlap 42%"
+    },
+    "APP008": {
+      "score": 0.1387,
+      "strike": false,
+      "method": "llm+phrases",
+      "breakdown": {
+        "vocab_sim": 0.201,
+        "phrase_sim": 0.0,
+        "struct_sim": 0.3418,
+        "phrase_score": 0.0
+      },
+      "matched_phrases": [],
+      "reason": "score below threshold"
+    },
+    "APP016": {
+      "score": 0.2201,
+      "strike": false,
+      "method": "llm+phrases",
+      "breakdown": {
+        "vocab_sim": 0.3565,
+        "phrase_sim": 0.0,
+        "struct_sim": 0.4769,
+        "phrase_score": 0.0
+      },
+      "matched_phrases": [],
+      "reason": "score below threshold"
+    },
+    "APP019": {
+      "score": 0.202,
+      "strike": false,
+      "method": "llm+phrases",
+      "breakdown": {
+        "vocab_sim": 0.3535,
+        "phrase_sim": 0.0,
+        "struct_sim": 0.3915,
+        "phrase_score": 0.0
+      },
+      "matched_phrases": [],
+      "reason": "score below threshold"
+    },
+    "APP021": {
+      "score": 0.2475,
+      "strike": false,
+      "method": "llm+phrases",
+      "breakdown": {
+        "vocab_sim": 0.3995,
+        "phrase_sim": 0.0,
+        "struct_sim": 0.5386,
+        "phrase_score": 0.0
+      },
+      "matched_phrases": [],
+      "reason": "score below threshold"
+    },
+    "APP026": {
+      "score": 0.2629,
+      "strike": false,
+      "method": "llm+phrases",
+      "breakdown": {
+        "vocab_sim": 0.3945,
+        "phrase_sim": 0.0,
+        "struct_sim": 0.6241,
+        "phrase_score": 0.0
+      },
+      "matched_phrases": [],
+      "reason": "score below threshold"
+    },
+    "APP005": {
+      "score": 0.1886,
+      "strike": false,
+      "method": "llm+phrases",
+      "breakdown": {
+        "vocab_sim": 0.2879,
+        "phrase_sim": 0.0,
+        "struct_sim": 0.4391,
+        "phrase_score": 0.0
+      },
+      "matched_phrases": [],
+      "reason": "score below threshold"
+    },
+    "APP007": {
+      "score": 0.2276,
+      "strike": false,
+      "method": "llm+phrases",
+      "breakdown": {
+        "vocab_sim": 0.3519,
+        "phrase_sim": 0.0,
+        "struct_sim": 0.5222,
+        "phrase_score": 0.0
+      },
+      "matched_phrases": [],
+      "reason": "score below threshold"
+    },
+    "APP028": {
+      "score": 0.2478,
+      "strike": false,
+      "method": "llm+phrases",
+      "breakdown": {
+        "vocab_sim": 0.3686,
+        "phrase_sim": 0.0,
+        "struct_sim": 0.5942,
+        "phrase_score": 0.0
+      },
+      "matched_phrases": [],
+      "reason": "score below threshold"
+    },
+    "APP010": {
+      "score": 0.2189,
+      "strike": false,
+      "method": "llm+phrases",
+      "breakdown": {
+        "vocab_sim": 0.2875,
+        "phrase_sim": 0.0,
+        "struct_sim": 0.5915,
+        "phrase_score": 0.0
+      },
+      "matched_phrases": [],
+      "reason": "score below threshold"
+    },
+    "APP024": {
+      "score": 0.2398,
+      "strike": false,
+      "method": "llm+phrases",
+      "breakdown": {
+        "vocab_sim": 0.3951,
+        "phrase_sim": 0.0,
+        "struct_sim": 0.5075,
+        "phrase_score": 0.0
+      },
+      "matched_phrases": [],
+      "reason": "score below threshold"
+    },
+    "APP030": {
+      "score": 0.2399,
+      "strike": false,
+      "method": "llm+phrases",
+      "breakdown": {
+        "vocab_sim": 0.376,
+        "phrase_sim": 0.0,
+        "struct_sim": 0.5417,
+        "phrase_score": 0.0
+      },
+      "matched_phrases": [],
+      "reason": "score below threshold"
+    },
+    "APP014": {
+      "score": 0.2514,
+      "strike": false,
+      "method": "llm+phrases",
+      "breakdown": {
+        "vocab_sim": 0.3771,
+        "phrase_sim": 0.0,
+        "struct_sim": 0.5971,
+        "phrase_score": 0.0
+      },
+      "matched_phrases": [],
+      "reason": "score below threshold"
+    },
+    "APP017": {
+      "score": 0.2601,
+      "strike": false,
+      "method": "llm+phrases",
+      "breakdown": {
+        "vocab_sim": 0.4439,
+        "phrase_sim": 0.0,
+        "struct_sim": 0.5237,
+        "phrase_score": 0.0
+      },
+      "matched_phrases": [],
+      "reason": "vocab overlap 44%"
+    },
+    "APP022": {
+      "score": 0.2683,
+      "strike": false,
+      "method": "llm+phrases",
+      "breakdown": {
+        "vocab_sim": 0.4678,
+        "phrase_sim": 0.0,
+        "struct_sim": 0.5226,
+        "phrase_score": 0.0
+      },
+      "matched_phrases": [],
+      "reason": "vocab overlap 47%"
+    },
+    "APP025": {
+      "score": 0.2465,
+      "strike": false,
+      "method": "llm+phrases",
+      "breakdown": {
+        "vocab_sim": 0.4165,
+        "phrase_sim": 0.0,
+        "struct_sim": 0.5038,
+        "phrase_score": 0.0
+      },
+      "matched_phrases": [],
+      "reason": "vocab overlap 42%"
+    },
+    "APP027": {
+      "score": 0.3573,
+      "strike": false,
+      "method": "llm+phrases",
+      "breakdown": {
+        "vocab_sim": 0.458,
+        "phrase_sim": 0.0,
+        "struct_sim": 0.4633,
+        "phrase_score": 0.6957
+      },
+      "matched_phrases": [
+        "i would be happy to",
+        "great question",
+        "furthermore,",
+        "i hope this helps"
+      ],
+      "reason": "vocab overlap 46%; 4 AI phrases found"
+    },
+    "APP009": {
+      "score": 0.2613,
+      "strike": false,
+      "method": "llm+phrases",
+      "breakdown": {
+        "vocab_sim": 0.4735,
+        "phrase_sim": 0.0,
+        "struct_sim": 0.4779,
+        "phrase_score": 0.0
+      },
+      "matched_phrases": [],
+      "reason": "vocab overlap 47%"
+    },
+    "APP002": {
+      "score": 0.4305,
+      "strike": false,
+      "method": "llm+phrases",
+      "breakdown": {
+        "vocab_sim": 0.4657,
+        "phrase_sim": 0.0,
+        "struct_sim": 0.5877,
+        "phrase_score": 1.0
+      },
+      "matched_phrases": [
+        "i'd be happy to",
+        "in today's rapidly evolving",
+        "first and foremost",
+        "last but not least",
+        "it's worth noting",
+        "furthermore,"
+      ],
+      "reason": "vocab overlap 47%; 8 AI phrases found"
+    },
+    "APP029": {
+      "score": 0.2227,
+      "strike": false,
+      "method": "llm+phrases",
+      "breakdown": {
+        "vocab_sim": 0.3697,
+        "phrase_sim": 0.0,
+        "struct_sim": 0.4666,
+        "phrase_score": 0.0
+      },
+      "matched_phrases": [],
+      "reason": "score below threshold"
+    },
+    "APP006": {
+      "score": 0.414,
+      "strike": false,
+      "method": "llm+phrases",
+      "breakdown": {
+        "vocab_sim": 0.4711,
+        "phrase_sim": 0.0,
+        "struct_sim": 0.5466,
+        "phrase_score": 0.9323
+      },
+      "matched_phrases": [
+        "in today's rapidly evolving",
+        "first and foremost",
+        "it's important to note",
+        "furthermore,",
+        "rest assured",
+        "as an ai"
+      ],
+      "reason": "vocab overlap 47%; 6 AI phrases found"
+    },
+    "APP023": {
+      "score": 0.4139,
+      "strike": false,
+      "method": "llm+phrases",
+      "breakdown": {
+        "vocab_sim": 0.4429,
+        "phrase_sim": 0.0,
+        "struct_sim": 0.5444,
+        "phrase_score": 1.0
+      },
+      "matched_phrases": [
+        "i would be happy to",
+        "here's a comprehensive",
+        "comprehensive overview",
+        "in today's rapidly evolving",
+        "first and foremost",
+        "it's worth noting"
+      ],
+      "reason": "vocab overlap 44%; 11 AI phrases found"
+    },
+    "APP013": {
+      "score": 0.0959,
+      "strike": false,
+      "method": "llm+phrases",
+      "breakdown": {
+        "vocab_sim": 0.0451,
+        "phrase_sim": 0.0,
+        "struct_sim": 0.4008,
+        "phrase_score": 0.0
+      },
+      "matched_phrases": [],
+      "reason": "score below threshold"
+    },
+    "APP011": {
+      "score": 0.4474,
+      "strike": false,
+      "method": "llm+phrases",
+      "breakdown": {
+        "vocab_sim": 0.5351,
+        "phrase_sim": 0.0,
+        "struct_sim": 0.5505,
+        "phrase_score": 1.0
+      },
+      "matched_phrases": [
+        "i would be happy to",
+        "here's a comprehensive",
+        "comprehensive overview",
+        "in today's rapidly evolving",
+        "it's worth noting",
+        "furthermore,"
+      ],
+      "reason": "vocab overlap 54%; 7 AI phrases found"
+    },
+    "APP015": {
+      "score": 0.423,
+      "strike": false,
+      "method": "llm+phrases",
+      "breakdown": {
+        "vocab_sim": 0.4688,
+        "phrase_sim": 0.0,
+        "struct_sim": 0.5444,
+        "phrase_score": 1.0
+      },
+      "matched_phrases": [
+        "i would be happy to",
+        "certainly!",
+        "here's a comprehensive",
+        "comprehensive overview",
+        "in today's rapidly evolving",
+        "first and foremost"
+      ],
+      "reason": "vocab overlap 47%; 11 AI phrases found"
+    },
+    "APP018": {
+      "score": 0.4258,
+      "strike": false,
+      "method": "llm+phrases",
+      "breakdown": {
+        "vocab_sim": 0.5019,
+        "phrase_sim": 0.0,
+        "struct_sim": 0.5007,
+        "phrase_score": 1.0
+      },
+      "matched_phrases": [
+        "i would be happy to",
+        "needless to say",
+        "first and foremost",
+        "furthermore,",
+        "moving forward",
+        "going forward"
+      ],
+      "reason": "vocab overlap 50%; 8 AI phrases found"
+    },
+    "APP004": {
+      "score": 0.1778,
+      "strike": false,
+      "method": "llm+phrases",
+      "breakdown": {
+        "vocab_sim": 0.2879,
+        "phrase_sim": 0.0,
+        "struct_sim": 0.385,
+        "phrase_score": 0.0
+      },
+      "matched_phrases": [],
+      "reason": "score below threshold"
+    },
+    "APP020": {
+      "score": 0.2011,
+      "strike": false,
+      "method": "llm+phrases",
+      "breakdown": {
+        "vocab_sim": 0.3271,
+        "phrase_sim": 0.0,
+        "struct_sim": 0.433,
+        "phrase_score": 0.0
+      },
+      "matched_phrases": [],
+      "reason": "score below threshold"
+    }
+  }
+}

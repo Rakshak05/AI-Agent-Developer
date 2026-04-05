@@ -1,0 +1,20 @@
+# Data files containing sensitive information
+data/config.json
+data/gmail_token.json
+data/gmail_credentials.json
+data/recruitment.db
+
+# Log files
+logs/
+*.log
+
+# Environment files
+.env
+.venv/
+venv/
+
+# Excel files
+*.xlsx
+
+# Other sensitive files
+config.json
