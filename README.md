@@ -1,10 +1,10 @@
-# 🤖 GenoTek Global - AI Recruitment Automation Pipeline
+# GenoTek Global - AI Recruitment Automation Pipeline
 
 ### Building an End-to-End Autonomous Hiring System
 
 This project implements a sophisticated AI-powered recruitment automation system that handles the complete hiring pipeline from candidate sourcing to evaluation and engagement.
 
-## 🎯 Key Features
+## Key Features
 
 ### 1. **Sandboxed Code Execution**
 - Extracts Python code from candidate email submissions
@@ -38,7 +38,7 @@ This project implements a sophisticated AI-powered recruitment automation system
 - Candidate search and filtering capabilities
 - Export functionality to CSV
 
-## 🏗️ Architecture
+## Architecture
 
 ```
                        ┌───────────────────┐
@@ -82,7 +82,7 @@ This project implements a sophisticated AI-powered recruitment automation system
                        └───────────────────┘
 ```
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 - Python 3.9+
@@ -106,8 +106,17 @@ mkdir -p data logs
 
 ### Initial Setup
 
+Before running the code, set up your local configuration by copying the example files and filling in your own API keys:
+
 ```bash
-# 1. Configure Internshala job ID
+# 1. Set up Environment variables
+cp .env.example .env
+cp config.example.json config.json
+```
+*(Make sure to open `.env` and `config.json` and insert your API keys)*
+
+```bash
+# 2. Configure Internshala job ID
 python components/c1_access.py --job-id YOUR_JOB_ID
 
 # 2. Capture authentication cookies
@@ -123,7 +132,7 @@ python components/c6_integration.py --run-pipeline
 streamlit run dashboard.py
 ```
 
-## 📊 Running the Demo
+## Running the Demo
 
 ### Step 1: Activate your virtual environment and install missing packages
 
@@ -161,7 +170,7 @@ streamlit run dashboard.py
 
 This will automatically open your browser to http://localhost:8501. Since you activated your virtual environment and installed the requirements, the command will now be successfully recognized!
 
-## 📊 Usage Examples
+## Usage Examples
 
 ### Run Complete Pipeline
 ```bash
@@ -183,14 +192,14 @@ python components/c6_integration.py --status
 streamlit run dashboard.py
 ```
 
-## 🛡️ Security Considerations
+## Security Considerations
 
 - **Code Execution**: All candidate code runs in isolated subprocesses with timeouts
 - **Credential Management**: API keys and tokens stored separately and gitignored
 - **Rate Limiting**: Built-in delays to prevent IP blocking
 - **Data Isolation**: Temporary execution environments cleaned after each run
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 ├── components/           # Core system components
@@ -214,7 +223,7 @@ streamlit run dashboard.py
 └── requirements.txt     # Python dependencies
 ```
 
-## 🤖 Components Overview
+## Components Overview
 
 ### Component 1: Access Layer
 Handles platform authentication, bypassing reCAPTCHA Enterprise using Chrome DevTools Protocol.
@@ -234,14 +243,14 @@ Self-improvement system that analyzes patterns and adjusts scoring weights autom
 ### Component 6: Integration Layer
 Orchestrates all components with retry mechanisms and error handling.
 
-## 📈 Performance & Scalability
+## Performance & Scalability
 
 - Handles 1,000+ candidates efficiently
 - SQLite WAL mode for concurrent reads
 - Exponential backoff for error recovery
 - Modular architecture for easy scaling
 
-## 🧪 Testing
+## Testing
 
 ```bash
 # Run tests
@@ -251,7 +260,7 @@ python -m pytest tests/
 python components/c6_integration.py --status
 ```
 
-## 🚀 Deployment
+## Deployment
 
 For production deployment:
 
@@ -260,10 +269,6 @@ For production deployment:
 3. Start service: `sudo systemctl start recruitment`
 4. Monitor logs: `sudo journalctl -u recruitment -f`
 
-## 📄 License
-
-MIT License - See LICENSE file for details.
-
-## 🙏 Acknowledgments
+## Acknowledgments
 
 This system was built for GenoTek Global's AI Agent Developer Challenge to demonstrate advanced AI integration, autonomous decision-making, and production-ready engineering practices.

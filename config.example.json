@@ -1,0 +1,25 @@
+{
+  "openai_api_key": "",
+  "model": "gpt-4-turbo",
+  "max_tokens": 4096,
+  "temperature": 0.7,
+  "debug": false,
+  "development": {
+    "default_language": "python",
+    "project_directory": "./projects",
+    "save_intermediate_results": true
+  },
+  "memory": {
+    "retention_days": 90,
+    "max_interactions": 1000
+  },
+  "planning": {
+    "max_steps_per_task": 20,
+    "allow_external_research": true
+  },
+  "learning": {
+    "enable_self_improvement": true,
+    "pattern_threshold": 0.7,
+    "adaptation_frequency": 10
+  }
+}
