@@ -94,7 +94,7 @@ This project implements a sophisticated AI-powered recruitment automation system
 
 ```bash
 # Clone repository
-git clone <repo-url>
+git clone https://github.com/Rakshak05/AI-Agent-Developer.git
 cd AI-Agent-Developer
 
 # Install dependencies
