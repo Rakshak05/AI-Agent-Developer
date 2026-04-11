@@ -1,6 +1,6 @@
 # System Architecture & Design Decisions
 
-## 🏗️ High-Level Architecture
+## High-Level Architecture
 
 ```mermaid
 graph TB
@@ -19,7 +19,7 @@ graph TB
     J[Streamlit Dashboard] -->|Real-time Metrics| G
 ```
 
-## 🔧 Component Deep Dive
+## Component Deep Dive
 
 ### **C1: Access Layer** - Platform Authentication & Data Extraction
 
@@ -63,7 +63,7 @@ graph TB
 - Thread tracking in SQLite (maintains Gmail thread ID for proper threading)
 - Handles 50+ simultaneous conversations
 
-**🆕 Sandboxed Code Execution:**
+** Sandboxed Code Execution:**
 - When candidates submit Python code in emails:
   1. Extract code blocks using regex (handles markdown fences)
   2. Execute in isolated temp directory with 10s timeout
@@ -77,7 +77,7 @@ graph TB
 - Output size limits (5KB max)
 - Timeout protection (10s default)
 
-**🆕 Proactive Nudge Workflow:**
+** Proactive Nudge Workflow:**
 - Scans every 5 minutes for Fast-Track candidates who:
   - Received Round 1 but haven't replied in 48+ hours
   - Haven't been nudged in the last 7 days
@@ -156,7 +156,7 @@ This is overkill for the prototype but demonstrates architectural maturity for s
 
 ---
 
-## 🎨 Real-Time Dashboard
+## Real-Time Dashboard
 
 **Built with Streamlit + Plotly**
 
@@ -179,7 +179,7 @@ Access at: `http://localhost:8501`
 
 ---
 
-## 🔐 Security Considerations
+## Security Considerations
 
 ### Code Execution Sandbox
 - **Current**: Subprocess with timeout, temp directory isolation
@@ -201,7 +201,7 @@ Access at: `http://localhost:8501`
 
 ---
 
-## 📊 Data Flow
+## Data Flow
 
 ```
 Internshala (HTML) 
@@ -225,7 +225,7 @@ Streamlit UI (real-time metrics)
 
 ---
 
-## 🚀 Deployment
+## Deployment
 
 ### Local Development
 ```bash
@@ -256,7 +256,7 @@ sudo journalctl -u recruitment -f
 
 ---
 
-## 🧪 Testing Strategy
+## Testing Strategy
 
 **Unit Tests:**
 - Code sandbox execution (various error types)
@@ -276,7 +276,7 @@ pytest tests/ -v
 
 ---
 
-## 📈 Performance Metrics
+## Performance Metrics
 
 **Expected Throughput:**
 - Scraping: ~20 applicants/min (with polite delays)
@@ -291,7 +291,7 @@ pytest tests/ -v
 
 ---
 
-## 🎯 Key Differentiators
+## Key Differentiators
 
 1. **Sandboxed Code Execution**: Actually runs candidate code and provides execution feedback (not just LLM judgment)
 2. **Self-Healing Scraper**: LLM fallback when HTML structure changes (production resilience)

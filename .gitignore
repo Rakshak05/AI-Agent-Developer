@@ -13,6 +13,9 @@ logs/
 .venv/
 venv/
 
+# Python cache
+__pycache__/
+
 # Excel files
 *.xlsx
 
